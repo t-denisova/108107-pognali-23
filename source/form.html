@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Направления - HTML Academy: Погнали</title>
+  </head>
+  <body>
+    <a class="skiplink" href="#main">
+      Перейти к основному контенту
+    </a>
+    <header class="header">
+      <a class="header-logo logo" href="#">
+        <img
+          src="img/logo_mobile.svg"
+          width="96"
+          height="15"
+          alt="Погнали"
+        />
+      </a>
+      <button class="header__action" aria-label="Меню" type="button">
+        <img
+          src="img/icon_menu_mobile.svg"
+          width="25"
+          height="11"
+          alt="Меню"
+        />
+      </button>
+      <div class="header__module">
+        <nav class="header__menu">
+          <ul class="header__menu-list">
+            <li class="header__menu-item">
+              <a
+                class="header__menu-link"
+                href="#"
+                target="_blank">
+                О сервисе
+              </a>
+            </li>
+            <li class="header__menu-item">
+              <a
+                class="header__menu-link"
+                href="#"
+                target="_blank">
+                Направления
+              </a>
+            </li>
+            <li class="header__menu-item">
+              <a
+                class="header__menu-link"
+                href="#"
+                target="_blank">
+                Попутчики
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-contacts contacts">
+          <a
+            class="contacts__link"
+            href="tel:88005558628"
+            target="_blank">
+            <img
+              class="contacts__icon"
+              src="img/icon_telephone.svg"
+              width="18"
+              height="17"
+              alt=""
+            />
+            8 800 555-86-28
+          </a>
+          <a
+            class="contacts__link"
+            href="mailto:mail@htmlacademy.ru"
+            target="_blank">
+            <img
+              class="contacts__icon"
+              src="img/icon_mail.svg"
+              width="18"
+              height="17"
+              alt=""
+            />
+            mail@htmlacademy.ru
+          </a>
+        </div>
+        <button class="header__auth auth" type="button">Авторизация</button>
+        <ul class="header-social social">
+          <li class="social__item">
+            <a
+              class="social__link"
+              href="#"
+              target="_blank"
+            >
+              <img
+                src="img/icon_facebook.svg"
+                width="11"
+                height="21"
+                alt="Фейсбук"
+              />
+            </a>
+          </li>
+          <li class="social__item">
+            <a
+              class="social__link"
+              href="#"
+              target="_blank"
+              >
+              <img
+                src="img/icon_vkontakte.svg"
+                width="22"
+                height="11"
+                alt="ВКонтакте"
+              />
+            </a>
+          </li>
+          <li class="social__item">
+            <a
+              class="social__link"
+              href="#"
+              target="_blank">
+              <img
+                src="img/icon_instagram.svg"
+                width="18"
+                height="18"
+                alt="Инстаграм"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main class="form" id="main">
+      <div class="heading">
+        <h1 class="header-01">
+          Направления
+        </h1>
+      </div>
+      <h2 class="visually-hidden">
+        Профиль
+      </h2>
+      <div class="form-travaler traveler">
+        <img
+          class="traveler__photo"
+          src="img/demin-desktop-1.png"
+          width="100"
+          height="100"
+          alt="Петя Демин"
+        />
+        <button class="traveler__change-photo" type="button">
+          сменить фото
+        </button>
+        <div class="traveler__score">
+          <p>80<span>level</span></p>
+        </div>
+        <div class="traveler__inner">
+          <h3 class="traveler__header">Петя Демин</h3>
+          <div class="traveler__countries">
+            <img
+              class="traveler__country"
+              src="img/belgium-50.png"
+              width="35"
+              height="25"
+              alt="Бельгия"
+            />
+            <img
+              class="traveler__country"
+              src="img/czech-1.png"
+              width="35"
+              height="25"
+              alt="Чехия"
+            />
+          </div>
+          <form action="https://echo.htmlacademy.ru" method="post">
+            <div class="tags-textarea">
+              <label class="tags-textarea__label" id="tags">
+                теги
+              </label>
+              <div class="tags-textarea__wrapper">
+                <textarea
+                  class="tags-textarea__input"
+                  for="tags"
+                  name="tags">
+                  #бургер #бар #футбол #концерт #крафт
+                </textarea>
+              </div>
+            </div>
+          </form>
+          <div class="traveler__transport">
+            <img
+              class="traveler__transport-item traveler__transport-item--active"
+              src="img/icon_plane.svg"
+              width="18"
+              height="19"
+              alt="Самолет"
+            />
+            <img
+              class="traveler__transport-item traveler__transport-item--active"
+              src="img/icon_bus.svg"
+              width="17"
+              height="19"
+              alt="Автобус"
+            />
+            <img
+              class="traveler__transport-item"
+              src="img/icon_bicycle.svg"
+              width="24"
+              height="24"
+              alt="Велосипед"
+            />
+            <img
+              class="traveler__transport-item traveler__transport-item--active"
+              src="img/icon_run.svg"
+              width="21"
+              height="23"
+              alt="Бег"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="plans">
+        <h2 class="form__header-02">Мои планы:</h2>
+        <ol class="plans__list">
+          <li class="plans__item">
+            <h3 class="plans__header">Франция, Италия</h3>
+            <p class="plans__info">3 попутчика</p>
+            <p class="plans__date">26 мар — 29 мар</p>
+            <button class="plans__button" type="button">
+              изменить
+            </button>
+          </li>
+          <li class="plans__item">
+            <h3 class="plans__header">Таиланд, Индонезия</h3>
+            <p class="plans__info">1 попутчик</p>
+            <p class="plans__date">1 июл — 15 июл</p>
+            <button class="plans__button" type="button">
+              изменить
+            </button>
+          </li>
+        </ol>
+      </div>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <div class="step">
+          <div class="step__button-01heading">
+            <h2 class="form__header-02">Добавить план:</h2>
+            <div class="step__progress-indicator">
+              <p>.</p>
+              <p>.</p>
+              <p>.</p>
+            </div>
+          </div>
+          <div>
+            <h3>Шаг 1. Даты пребывания</h3>
+            <p class="step__desc">
+              Укажите предпочтительное количество попутчиков, которых
+              вы хотели бы позвать в поездку, и ее предполагаемую длительность.
+            </p>
+            <div class="number">
+              <label class="label" for="number-1">
+                ищу попутчиков: <span>чел</span>
+              </label>
+              <div class="number__input-wrpper">
+                <button class="number__control-button" type="button">-</button>
+                <input
+                  class="number__input"
+                  for="number-1"
+                  name="partners"
+                  type="number"
+                  step="1">
+                <button class="number__control-button" type="button">+</button>
+              </div>
+            </div>
+            <div class="number">
+              <label class="label" for="number-2">
+                длительность: <span>дн.</span>
+              </label>
+              <div class="number__input-wrpper">
+                <button class="number__control-button" type="button">
+                  <img
+                    src="img/minus.svg"
+                    width="14"
+                    height="14"
+                    alt="Вычесть"
+                  />
+                </button>
+                <input
+                  class="number__input"
+                  for="number-2"
+                  name="partners"
+                  type="number"
+                  step="1">
+                <button class="number__control-button" type="button">
+                  <img
+                    src="img/plus.svg"
+                    width="14"
+                    height="14"
+                    alt="Прибавить"
+                  />
+                </button>
+              </div>
+            </div>
+            <div class="calendar">
+              <div class="calendar__month">
+                <button class="calendar__month-button" type="button">
+                  <img
+                    src="img/arrow-back.svg"
+                    width="15"
+                    height="21"
+                    alt="Назад"
+                  />
+                </button>
+                <span>Март 2019</span>
+                <button class="calendar__month-button" type="button">
+                  <img
+                    src="img/arrow-back.svg"
+                    width="15"
+                    height="21"
+                    alt="Назад"
+                  />
+              </div>
+              <ol class="calendar__weekdays">
+                <li class="calendar__weekday">П</li>
+                <li class="calendar__weekday">В</li>
+                <li class="calendar__weekday">С</li>
+                <li class="calendar__weekday">Ч</li>
+                <li class="calendar__weekday">П</li>
+                <li class="calendar__weekday">С</li>
+                <li class="calendar__weekday">В</li>
+              </ol>
+              <div class="calendar__days">
+                <button class="calendar__day" type="button">1</button>
+                <button class="calendar__day" type="button">1</button>
+                <button class="calendar__day" type="button">1</button>
+              </div>
+            </div>
+            <button class="step__button-01" type="button">Следующий шаг</button>
+          </div>
+        </div>
+        <div class="step">
+          <h2 class="form__header-02">Шаг 2. Маршрут</h2>
+          <p class="step__desc">
+            Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.
+          </p>
+          <div class="select form__item">
+            <div class="select__input-wrpper">
+              <select class="select__input" id="select-1">
+                <option
+                  class="select__option"
+                  value="bosnia-and-herzegovina"
+                  selected>
+                  Босния и герцеговина
+                </option>
+              </select>
+              <img
+                src="img/arrow-back.svg"
+                width="16"
+                height="12"
+              />
+            </div>
+            <div class="select__flag-wrapper">
+              <img
+                class="select__flag"
+                src="img/bosnia-and-herzegovina.png"
+                width="35"
+                height="25"
+              />
+            </div>
+            <img
+              class="form__item-delete"
+              src="img/icon_close.svg"
+              width="21"
+              height="21"
+              alt="Удалить"
+            />
+          </div>
+          <div class="select">
+            <div class="select__input-wrpper">
+              <select class="select__input" id="select-1">
+                <option
+                  class="select__option"
+                  value="czech"
+                  selected>
+                  Чехия
+                </option>
+              </select>
+              <img
+                src="img/arrow-back.svg"
+                width="16"
+                height="12"
+              />
+            </div>
+            <div class="select__flag-wrapper">
+              <img
+                class="select__flag"
+                src="img/czech-2.png"
+                width="35"
+                height="25"
+              />
+            </div>
+            <img
+              class="form__item-delete"
+              src="img/icon_close.svg"
+              width="21"
+              height="21"
+              alt="Удалить"
+            />
+          </div>
+          <button class="step__add-country" type="button">
+            Добавить страну
+          </button>
+          <div class="form__item form-choose-country-module choose-country-module">
+            <div class="choose-country-module__action-wrapper">
+              <button class="choose-country-module__action" type="button">
+                Выберите странy
+              </button>
+              <img
+                class="form__item-delete"
+                src="img/icon_close.svg"
+                width="21"
+                height="21"
+                alt="Удалить"
+              />
+            </div>
+            <div class="choose-country-module__filter-wrapper">
+              <div class="choose-country-module__filter">
+                <button class="choose-country-module__filter-button choose-country-module__filter-button--active" type="button">
+                  А
+                </button>
+                <button class="choose-country-module__filter-button" type="button">
+                  Б
+                </button>
+                <button class="choose-country-module__filter-button" type="button">
+                  В
+                </button>
+              </div>
+              <ul class="choose-country-module__countries">
+                <li class="choose-country-module__country">
+                  <button class="choose-country-module__country-button" type="button">
+                    Австралия
+                  </button>
+                </li>
+              </ul>
+              <ul class="choose-country-module__countries">
+                <li class="choose-country-module__country">
+                  <button class="choose-country-module__country-button" type="button">
+                    Австрия
+                  </button>
+                </li>
+              </ul>
+              <ul class="choose-country-module__countries">
+                <li class="choose-country-module__country">
+                  <button class="choose-country-module__country-button" type="button">
+                    Азербайджан
+                  </button>
+                </li>
+              </ul>
+              <ul class="choose-country-module__countries">
+                <li class="choose-country-module__country">
+                  <button class="choose-country-module__country-button" type="button">
+                    Албания
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <button class="step__button-01" type="button">
+            Следующий шаг
+          </button>
+          <button class="step__button-02" type="button">
+            На шаг назад
+          </button>
+        </div>
+        <div class="step">
+          <h2 class="form__header-02">Шаг 3. Развлечения</h2>
+          <p class="step__desc">
+            Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.
+          </p>
+          <div class="path">
+            <div class="textarea">
+              <label class="label label--active" id="textarea-1">
+                Босния и Герцеговина
+                <span class="textarea__flag">
+                  <img
+                    src="img/bosnia-and-herzegovina.png"
+                    width="35"
+                    height="25"
+                    alt=""
+                  />
+                </span>
+              </label>
+              <div class="textarea__wrapper">
+                <textarea
+                  class="textarea__input"
+                  for="textarea-1"
+                  name="bosnia-and-herzegovina"
+                  rows="5">
+                </textarea>
+              </div>
+            </div>
+            <div class="textarea">
+              <label class="label label--active" id="textarea-2">
+                Чехия
+                <span class="textarea__flag">
+                  <img
+                    src="img/czech-2.png"
+                    width="35"
+                    height="25"
+                    alt=""
+                  />
+                </span>
+              </label>
+              <div class="textarea__wrapper">
+                <textarea
+                  class="textarea__input"
+                  for="textarea-2"
+                  name="czech"
+                  rows="5">
+                </textarea>
+              </div>
+            </div>
+          </div>
+          <button class="step__button-01" type="submit">
+            Отправить
+          </button>
+          <button class="step__button-02" type="button">
+            На шаг назад
+          </button>
+        </div>
+      </form>
+    </main>
+    <footer class="footer" role="contentinfo">
+      <div class="wrapper">
+        <a class="footer-logo logo" href="#">
+          <img
+            src="img/logo_mobile.svg"
+            width="96"
+            height="15"
+            alt="Погнали"
+          />
+        </a>
+        <ul class="footer-social social">
+          <li class="social__item">
+            <a
+              class="social__link"
+              href="#"
+              target="_blank"
+            >
+              <img
+                src="img/icon_facebook.svg"
+                width="11"
+                height="21"
+                alt="Фейсбук"
+              />
+            </a>
+          </li>
+          <li class="social__item">
+            <a
+              class="social__link"
+              href="#"
+              target="_blank"
+              >
+              <img
+                src="img/icon_vkontakte.svg"
+                width="22"
+                height="11"
+                alt="ВКонтакте"
+              />
+            </a>
+          </li>
+          <li class="social__item">
+            <a
+              class="social__link"
+              href="#"
+              target="_blank">
+              <img
+                src="img/icon_instagram.svg"
+                width="18"
+                height="18"
+                alt="Инстаграм"
+              />
+            </a>
+          </li>
+        </ul>
+        <div class="footer__credits">
+          <p class="footer__credits-text">Разработано</p>
+          <a
+            class="footer__credits-logo"
+            href="#"
+            target="_blank">
+            <img
+              src="img/htmlacademy.svg"
+              width="27"
+              height="33"
+              alt="HTML Академия"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
