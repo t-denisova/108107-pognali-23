@@ -173,13 +173,13 @@
           </div>
           <form action="https://echo.htmlacademy.ru" method="post">
             <div class="tags-textarea">
-              <label class="tags-textarea__label" id="tags">
+              <label class="tags-textarea__label" for="tags">
                 теги
               </label>
               <div class="tags-textarea__wrapper">
                 <textarea
                   class="tags-textarea__input"
-                  for="tags"
+                  id="tags"
                   name="tags">
                   #бургер #бар #футбол #концерт #крафт
                 </textarea>
@@ -263,7 +263,7 @@
                 <button class="number__control-button" type="button">-</button>
                 <input
                   class="number__input"
-                  for="number-1"
+                  id="number-1"
                   name="partners"
                   type="number"
                   step="1">
@@ -285,7 +285,7 @@
                 </button>
                 <input
                   class="number__input"
-                  for="number-2"
+                  id="number-2"
                   name="partners"
                   type="number"
                   step="1">
@@ -298,6 +298,10 @@
                   />
                 </button>
               </div>
+            </div>
+            <div class="checkbox">
+              <input class="checkbox__input" type="checkbox" id="children">
+              <label class="checkbox__label" for="children">Можно с детьми</label>
             </div>
             <div class="calendar">
               <div class="calendar__month">
@@ -317,6 +321,7 @@
                     height="21"
                     alt="Назад"
                   />
+                </button>
               </div>
               <ol class="calendar__weekdays">
                 <li class="calendar__weekday">П</li>
@@ -355,6 +360,7 @@
                 src="img/arrow-back.svg"
                 width="16"
                 height="12"
+                alt=""
               />
             </div>
             <div class="select__flag-wrapper">
@@ -363,6 +369,7 @@
                 src="img/bosnia-and-herzegovina.png"
                 width="35"
                 height="25"
+                alt=""
               />
             </div>
             <img
@@ -375,7 +382,7 @@
           </div>
           <div class="select">
             <div class="select__input-wrpper">
-              <select class="select__input" id="select-1">
+              <select class="select__input" id="select-2">
                 <option
                   class="select__option"
                   value="czech"
@@ -387,6 +394,7 @@
                 src="img/arrow-back.svg"
                 width="16"
                 height="12"
+                alt=""
               />
             </div>
             <div class="select__flag-wrapper">
@@ -395,6 +403,7 @@
                 src="img/czech-2.png"
                 width="35"
                 height="25"
+                alt=""
               />
             </div>
             <img
@@ -433,29 +442,23 @@
                   В
                 </button>
               </div>
-              <ul class="choose-country-module__countries">
-                <li class="choose-country-module__country">
+              <ul class="choose-country-module__directions">
+                <li class="choose-country-module__direction">
                   <button class="choose-country-module__country-button" type="button">
                     Австралия
                   </button>
                 </li>
-              </ul>
-              <ul class="choose-country-module__countries">
-                <li class="choose-country-module__country">
+                <li class="choose-country-module__direction">
                   <button class="choose-country-module__country-button" type="button">
                     Австрия
                   </button>
                 </li>
-              </ul>
-              <ul class="choose-country-module__countries">
-                <li class="choose-country-module__country">
+                <li class="choose-country-module__direction">
                   <button class="choose-country-module__country-button" type="button">
                     Азербайджан
                   </button>
                 </li>
-              </ul>
-              <ul class="choose-country-module__countries">
-                <li class="choose-country-module__country">
+                <li class="choose-country-module__direction">
                   <button class="choose-country-module__country-button" type="button">
                     Албания
                   </button>
@@ -477,7 +480,7 @@
           </p>
           <div class="path">
             <div class="textarea">
-              <label class="label label--active" id="textarea-1">
+              <label class="label label--active" for="textarea-1">
                 Босния и Герцеговина
                 <span class="textarea__flag">
                   <img
@@ -491,14 +494,14 @@
               <div class="textarea__wrapper">
                 <textarea
                   class="textarea__input"
-                  for="textarea-1"
+                  id="textarea-1"
                   name="bosnia-and-herzegovina"
                   rows="5">
                 </textarea>
               </div>
             </div>
             <div class="textarea">
-              <label class="label label--active" id="textarea-2">
+              <label class="label label--active" for="textarea-2">
                 Чехия
                 <span class="textarea__flag">
                   <img
@@ -512,7 +515,7 @@
               <div class="textarea__wrapper">
                 <textarea
                   class="textarea__input"
-                  for="textarea-2"
+                  id="textarea-2"
                   name="czech"
                   rows="5">
                 </textarea>
