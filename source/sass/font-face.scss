@@ -3,8 +3,10 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(../fonts/bloggersans.woff) format('woff');
-  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  src:
+    local("Blogger Sans"),
+    url(../fonts/bloggersans.woff2) format('woff2'),
+    url(../fonts/bloggersans.woff) format('woff');
 }
 
 @font-face {
@@ -12,8 +14,10 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(../fonts/bloggersans-bold.woff) format('woff');
-  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  src:
+    local("Blogger Sans"),
+    url(../fonts/bloggersans-bold.woff2) format('woff2'),
+    url(../fonts/bloggersans-bold.woff) format('woff');
 }
 
 @font-face {
@@ -21,8 +25,10 @@
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url(../fonts/bloggersans-light.woff) format('woff');
-  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  src:
+    local("Blogger Sans"),
+    url(../fonts/bloggersans-light.woff2) format('woff2')
+    url(../fonts/bloggersans-light.woff) format('woff');
 }
 
 @font-face {
@@ -30,6 +36,8 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(../fonts/bloggersans-medium.woff) format('woff');
-  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  src:
+    local("Blogger Sans"),
+    url(../fonts/bloggersans-medium.woff2) format('woff2'),
+    url(../fonts/bloggersans-medium.woff) format('woff');
 }
