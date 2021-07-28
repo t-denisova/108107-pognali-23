@@ -23,53 +23,53 @@
   border-bottom-right-radius: 30px;
 }
 
-.home-page__fold:nth-of-type(1) {
+.home-page__hero {
   position: relative;
   z-index: 8;
   background-color: $basic-blue;
   color: $basic-white;
 }
 
-.home-page__fold:nth-of-type(2) {
+.home-page__about {
   @include home-page__fold(30px);
   z-index: 7;
   background-color: $basic-blue;
   color: $basic-white;
 }
 
-.home-page__fold:nth-of-type(3){
+.home-page__directions {
   @include home-page__fold(100px);
   z-index: 6;
   background-color: #EDEFF6;
 }
 
-.home-page__fold:nth-of-type(4){
+.home-page__companions {
   @include home-page__fold(100px);
   z-index: 5;
   background-color: $basic-blue;
   color: $basic-white;
 }
 
-.home-page__fold:nth-of-type(5){
+.home-page__tariffs {
   @include home-page__fold(100px);
   z-index: 4;
   background-color: #E6E8F1;
 }
 
-.home-page__fold:nth-of-type(6){
+.home-page__connection {
   @include home-page__fold(100px);
   z-index: 3;
   background-color: $basic-blue;
   color: $basic-white;
 }
 
-.home-page__fold:nth-of-type(7){
+.home-page__home-page__address {
   @include home-page__fold(65px);
   z-index: 2;
   background-color: $basic-yellow;
 }
 
-.home-page__fold:nth-of-type(8){
+.home-page__map {
   position: relative;
   margin-top: -30px;
   z-index: 1;
