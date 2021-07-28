@@ -1,7 +1,16 @@
+.catalog-page {}
 
 .catalog-page__fieldset {
   background-color: $basic-yellow;
   border-radius: 20px;
   padding: 24px;
   margin: 28px 0;
+}
+
+.catalog-page__travaler + .catalog-page__travaler {
+  margin-top: 10px;
+}
+
+.catalog-page__controls {
+  margin: 24px 0 46px 0;
 }

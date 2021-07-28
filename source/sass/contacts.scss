@@ -6,3 +6,11 @@
   text-transform: uppercase;
   text-decoration: none;
 }
+
+.contacts--inverse {
+  .contacts__link {
+    color: $basic-yellow;
+  }
+}
+
+

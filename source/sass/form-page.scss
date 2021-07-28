@@ -8,19 +8,21 @@
   border-top-right-radius: 30px;
 }
 
-.form-page__plans {
+.form-page__fold {}
+
+.form-page__fold--01 {
   @include form-page__fold(50px);
   background-color: #DFE3F0;
   color: $basic-blue;
 }
 
-.form-page__steps {
+.form-page__fold--02 {
   @include form-page__fold(44px);
   background-color: #D4D9EB;
   color: $basic-blue;
 }
 
-.form-page__steps:after {
+.form-page__fold--02:after {
   content: '';
   position: absolute;
   width: 100%;
@@ -30,3 +32,6 @@
   background-color: #D4D9EB;
 }
 
+.form-page__traveler {
+  margin: 28px 0 60px;
+}
