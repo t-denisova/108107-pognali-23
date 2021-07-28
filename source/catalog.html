@@ -70,9 +70,9 @@
       </ul>
     </div>
   </header>
-  <main class="catalog" id="main">
-    <div class="heading">
-      <h1 class="header-01">
+  <main class="inner-page catalog" id="main">
+    <div class="inner-page__header">
+      <h1 class="inner-page__heading-01">
         Попутчики
       </h1>
     </div>
@@ -147,99 +147,103 @@
         </button>
       </div>
     </div>
-    <form action="https://echo.htmlacademy.ru" method="post">
-      <fieldset class="fieldset">
-        <legend class="fieldset__header">
-          Подберите идеального попутчика
-        </legend>
-        <details class="accordion">
-          <summary class="accordion__heading">хобби</summary>
-          <div class="checkbox">
-            <input class="checkbox__input" type="checkbox" id="hobbi-1">
-            <label class="checkbox__label" for="hobbi-1">Спортзал</label>
-          </div>
-          <div class="checkbox">
-            <input class="checkbox__input" type="checkbox" id="hobbi-2">
-            <label class="checkbox__label" for="hobbi-2">Кальян</label>
-          </div>
-          <div class="checkbox">
-            <input class="checkbox__input" type="checkbox" id="hobbi-3">
-            <label class="checkbox__label" for="hobbi-3">Диван</label>
-          </div>
-        </details>
-        <details class="accordion">
-          <summary class="accordion__heading">музыка</summary>
-          <div class="checkbox">
-            <input class="checkbox__input" type="checkbox" id="music-1">
-            <label class="checkbox__label" for="music-1">Тяжелый рок</label>
-          </div>
-          <div class="checkbox">
-            <input class="checkbox__input" type="checkbox" id="music-2">
-            <label class="checkbox__label" for="music-2">Русский рэп</label>
-          </div>
-          <div class="checkbox">
-            <input class="checkbox__input" type="checkbox" id="music-3">
-            <label class="checkbox__label" for="music-3">Евроденс</label>
-          </div>
-        </details>
-        <details class="accordion">
-          <summary class="accordion__heading">еда</summary>
-          <div class="checkbox">
-            <input class="checkbox__input" type="checkbox" id="food-1">
-            <label class="checkbox__label" for="food-1">Мясоед</label>
-          </div>
-          <div class="checkbox">
-            <input class="checkbox__input" type="checkbox" id="food-2">
-            <label class="checkbox__label" for="food-2">Сидит на ПП</label>
-          </div>
-          <div class="checkbox">
-            <input class="checkbox__input" type="checkbox" id="food-3">
-            <label class="checkbox__label" for="food-3">Веган-сыроед</label>
-          </div>
-        </details>
-        <details class="accordion">
-          <summary class="accordion__heading">транспорт</summary>
-          <ul class="catalog-transport trasport">
-            <li class="trasport__item">
-              <button class="trasport__button">
-                <img class="transport-item transport-item--active" src="img/icon_plane.svg"
-                  width="18" height="19" alt="Самолет" />
-              </button>
-            </li>
-            <li class="trasport__item">
-              <button class="trasport__button">
-                <img class="transport-item transport-item--active" src="img/icon_bus.svg" width="17"
-                  height="19" alt="Автобус" />
-              </button>
-            </li>
-            <li class="trasport__item">
-              <button class="trasport__button">
-                <img class="transport-item" src="img/icon_bicycle.svg" width="24" height="24"
-                  alt="Велосипед" />
-              </button>
-            </li>
-            <li class="trasport__item">
-              <button class="trasport__button">
-                <img class="transport-item transport-item--active" src="img/icon_run.svg" width="21"
-                  height="23" alt="Бег" />
-              </button>
-            </li>
-          </ul>
-        </details>
-        <details class="accordion">
-          <summary class="accordion__heading">Левел</summary>
-          <div class="range">
-            <div class="range__wrapper">
-              <input type=text name="level-min">
-              <input type=text name="level-max">
-            </div>
-            <input type="range" name="level" step="10">
-          </div>
-        </details>
-        <button type="submit">показать</button>
-      </fieldset>
-    </form>
-    <div class="catalog__cards">
+    <div class="wrapper">
+      <form class="form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="form__inner">
+          <fieldset class="fieldset">
+            <legend class="fieldset__label">
+              Подберите идеального попутчика
+            </legend>
+            <details class="accordion">
+              <summary class="accordion__heading">хобби</summary>
+              <div class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="hobbi-1">
+                <label class="checkbox__label" for="hobbi-1">Спортзал</label>
+              </div>
+              <div class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="hobbi-2">
+                <label class="checkbox__label" for="hobbi-2">Кальян</label>
+              </div>
+              <div class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="hobbi-3">
+                <label class="checkbox__label" for="hobbi-3">Диван</label>
+              </div>
+            </details>
+            <details class="accordion">
+              <summary class="accordion__heading">музыка</summary>
+              <div class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="music-1">
+                <label class="checkbox__label" for="music-1">Тяжелый рок</label>
+              </div>
+              <div class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="music-2">
+                <label class="checkbox__label" for="music-2">Русский рэп</label>
+              </div>
+              <div class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="music-3">
+                <label class="checkbox__label" for="music-3">Евроденс</label>
+              </div>
+            </details>
+            <details class="accordion">
+              <summary class="accordion__heading">еда</summary>
+              <div class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="food-1">
+                <label class="checkbox__label" for="food-1">Мясоед</label>
+              </div>
+              <div class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="food-2">
+                <label class="checkbox__label" for="food-2">Сидит на ПП</label>
+              </div>
+              <div class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="food-3">
+                <label class="checkbox__label" for="food-3">Веган-сыроед</label>
+              </div>
+            </details>
+            <details class="accordion">
+              <summary class="accordion__heading">транспорт</summary>
+              <ul class="catalog-transport trasport">
+                <li class="trasport__item">
+                  <button class="trasport__button">
+                    <img class="transport-item transport-item--active" src="img/icon_plane.svg"
+                      width="18" height="19" alt="Самолет" />
+                  </button>
+                </li>
+                <li class="trasport__item">
+                  <button class="trasport__button">
+                    <img class="transport-item transport-item--active" src="img/icon_bus.svg" width="17"
+                      height="19" alt="Автобус" />
+                  </button>
+                </li>
+                <li class="trasport__item">
+                  <button class="trasport__button">
+                    <img class="transport-item" src="img/icon_bicycle.svg" width="24" height="24"
+                      alt="Велосипед" />
+                  </button>
+                </li>
+                <li class="trasport__item">
+                  <button class="trasport__button">
+                    <img class="transport-item transport-item--active" src="img/icon_run.svg" width="21"
+                      height="23" alt="Бег" />
+                  </button>
+                </li>
+              </ul>
+            </details>
+            <details class="accordion">
+              <summary class="accordion__heading">Левел</summary>
+              <div class="range">
+                <div class="range__wrapper">
+                  <input type=text name="level-min">
+                  <input type=text name="level-max">
+                </div>
+                <input type="range" name="level" step="10">
+              </div>
+            </details>
+            <button type="submit">показать</button>
+          </fieldset>
+        </div>
+      </form>
+    </div>
+    <div class="wrapper">
       <h2 class="visually-hidden">Найденные попутчики</h2>
       <div class="catalog-travaler traveler">
         <img class="traveler__photo" src="img/firsova-mobile.png" width="70" height="70" alt="" />

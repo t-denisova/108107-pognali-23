@@ -1,0 +1,11 @@
+.fieldset {
+  padding: 0;
+  border: none;
+  margin: 0;
+}
+
+.fieldset__label {
+  @include heading-03();
+  color: $basic-blue-light;
+  margin: 0 0 24px 0;
+}

@@ -1,0 +1,5 @@
+.accordion__heading {
+  @include text-02();
+  color: $basic-blue-light;
+  text-transform: uppercase;
+}
