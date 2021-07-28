@@ -1,1 +1,51 @@
 .inner-page {}
+
+.inner-page__header {
+  background-color: $basic-blue;
+}
+
+.inner-page__heading-01 {
+  @include heading-01();
+  color: $basic-white;
+  margin: 0;
+}
+
+.inner-page__heading-02 {
+  @include heading-02();
+  color: $basic-blue;
+  margin: 0;
+  padding: 28px 0;
+}
+
+.inner-page__fold {}
+
+@mixin inner-page__fold($padding-bottom) {
+  position: relative;
+  padding-bottom: $padding-bottom;
+  margin-top: -30px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.inner-page__fold.plans {
+  @include inner-page__fold(50px);
+  background-color: #DFE3F0;
+  color: $basic-blue;
+}
+
+
+.inner-page__fold.steps {
+  @include inner-page__fold(44px);
+  background-color: #D4D9EB;
+  color: $basic-blue;
+}
+
+.inner-page__fold.steps:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  bottom: -30px;
+  left: 0;
+  background-color: #D4D9EB;
+}

@@ -1,0 +1,17 @@
+.step {}
+
+.steps__item {
+  background-color: $basic-white;
+  border-radius: 30px;
+  padding: 24px;
+}
+
+.steps__heading {
+  @include heading-03();
+  color: $basic-blue;
+  margin: 0;
+}
+
+.steps__item + .steps__item {
+  margin-top: 10px;
+}

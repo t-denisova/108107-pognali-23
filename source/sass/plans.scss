@@ -1,0 +1,30 @@
+.plans {}
+
+.plans__list {
+  padding: 0;
+  margin: 0;
+}
+
+.plans__item {
+  list-style: none;
+  padding: 24px;
+  background-color: $basic-white;
+  border-radius: 10px;
+}
+
+.plans__item::marker {
+  display: none;
+}
+
+.plans__item + .plans__item {
+  margin-top: 10px;
+}
+
+.plans__info {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+
+  color: $basic-blue;
+  text-transform: uppercase;
+}
