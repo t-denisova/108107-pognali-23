@@ -1,16 +1,16 @@
 body {
+  @include text-01();
   max-width: 100vw;
   overflow-x: hidden;
   overflow-y: scroll;
-  @include text-01();
   color: $special-grey;
-  background-color: #EDEFF6;
+  background-color: #edeff6;
   margin: 0;
 }
 
 html {
-  box-sizing: border-box;
   @include text-01();
+  box-sizing: border-box;
 }
 
 *,

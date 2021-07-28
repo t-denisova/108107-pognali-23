@@ -1,5 +1,3 @@
-.country {}
-
 .country__inner {
   background-color: $basic-white;
   border-radius: 10px;
@@ -8,12 +6,12 @@
 
 .country__header {
   @include heading-03();
-  color: #000;
+  color: #000000;
 }
 
 .country__desc,
 .country__users-num {
   @include text-01();
   color: $special-grey;
-  opacity: .3;
+  opacity: 0.3;
 }

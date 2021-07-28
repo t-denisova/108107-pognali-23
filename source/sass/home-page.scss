@@ -12,7 +12,7 @@
 .home-page__heading-02 {
   @include heading-02();
   color: $special-orange;
-  margin: 0
+  margin: 0;
 }
 
 .home-page__heading-02--center {
@@ -27,8 +27,6 @@
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
 }
-
-.home-page__fold {}
 
 .home-page__fold--01 {
   position: relative;
@@ -47,7 +45,7 @@
 .home-page__fold--03 {
   @include home-page__fold(100px);
   z-index: 6;
-  background-color: #EDEFF6;
+  background-color: #edeff6;
 }
 
 .home-page__fold--04 {
@@ -60,7 +58,7 @@
 .home-page__fold--05 {
   @include home-page__fold(100px);
   z-index: 4;
-  background-color: #E6E8F1;
+  background-color: #e6e8f1;
 }
 
 .home-page__fold--06 {

@@ -8,8 +8,6 @@
   background-color: transparent;
 }
 
-.traveler--action {}
-
 .traveler__heading {
   @include heading-03();
   color: $basic-blue;
