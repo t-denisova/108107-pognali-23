@@ -1,0 +1,76 @@
+.home-page {
+  position: relative;
+  z-index: 1;
+}
+
+.home-page__heading-01 {
+  @include heading-01();
+  color: $basic-white;
+  text-align: center;
+}
+
+.home-page__heading-02 {
+  @include heading-02();
+  color: $special-orange;
+  margin: 0
+}
+
+@mixin home-page__fold($padding-top) {
+  position: relative;
+  padding-top: $padding-top;
+  margin-top: -30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.home-page__fold:nth-of-type(1) {
+  position: relative;
+  z-index: 8;
+  background-color: $basic-blue;
+  color: $basic-white;
+}
+
+.home-page__fold:nth-of-type(2) {
+  @include home-page__fold(30px);
+  z-index: 7;
+  background-color: $basic-blue;
+  color: $basic-white;
+}
+
+.home-page__fold:nth-of-type(3){
+  @include home-page__fold(100px);
+  z-index: 6;
+  background-color: #EDEFF6;
+}
+
+.home-page__fold:nth-of-type(4){
+  @include home-page__fold(100px);
+  z-index: 5;
+  background-color: $basic-blue;
+  color: $basic-white;
+}
+
+.home-page__fold:nth-of-type(5){
+  @include home-page__fold(100px);
+  z-index: 4;
+  background-color: #E6E8F1;
+}
+
+.home-page__fold:nth-of-type(6){
+  @include home-page__fold(100px);
+  z-index: 3;
+  background-color: $basic-blue;
+  color: $basic-white;
+}
+
+.home-page__fold:nth-of-type(7){
+  @include home-page__fold(65px);
+  z-index: 2;
+  background-color: $basic-yellow;
+}
+
+.home-page__fold:nth-of-type(8){
+  position: relative;
+  margin-top: -30px;
+  z-index: 1;
+}

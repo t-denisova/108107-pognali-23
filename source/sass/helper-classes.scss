@@ -1,37 +1,13 @@
-//--------------
-// Global
-//--------------
-@import './colors.scss';
-@import './typogrphy.scss';
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
 
-//--------------
-// Containers
-//--------------
-@import './connection.scss';
-@import './form.scss';
-
-//--------------
-// Components
-//--------------
-@import './address.scss';
-@import './button.scss';
-@import './calendar.scss';
-@import './checkbox.scss';
-@import './choose-country.scss';
-@import './contacts.scss';
-@import './footer.scss';
-@import './form.scss';
-@import './header.scss';
-@import './label.scss';
-@import './logo.scss';
-@import './map.scss';
-@import './number.scss';
-@import './select.scss';
-@import './skiplink.scss';
-@import './socials.scss';
-@import './step.scss';
-@import './tariffs.scss';
-@import './textarea.scss';
-@import './transport.scss';
-@import './traveler.scss';
-
+.wrapper {
+  padding: 0 25px;
+  max-width: 1440px;
+  margin: 0 auto;
+}

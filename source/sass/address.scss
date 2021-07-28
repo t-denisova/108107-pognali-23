@@ -1,0 +1,6 @@
+.address {}
+
+.address__text {
+  @include text-02();
+  color: $basic-blue;
+}

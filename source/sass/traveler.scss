@@ -1,0 +1,16 @@
+.traveler {
+  background-color: $basic-white;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.traveler__heading {
+  @include heading-03();
+  color: $basic-blue;
+}
+
+.traveler__tags-item {
+  @include text-01();
+  color: $special-grey;
+  text-decoration: none;
+}

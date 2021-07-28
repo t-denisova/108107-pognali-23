@@ -13,7 +13,7 @@
   <a class="skiplink" href="#main">
     Перейти к основному контенту
   </a>
-  <header class="header">
+  <header class="header header--opened">
     <a class="header-logo logo" href="#">
       <img src="img/logo_mobile.svg" width="96" height="15" alt="Погнали" />
     </a>
@@ -70,15 +70,15 @@
       </ul>
     </div>
   </header>
-  <main class="home" id="main">
-    <div class="hero home__fold-01">
+  <main class="home-page" id="main">
+    <div class="home-page__fold hero">
       <img class="hero__image-01" src="img/globe-back-mobile-1.png" width="320" height="569" alt="" />
       <img class="hero__image-02" src="img/traveller-illustration-mobile-1.png" width="192" height="255" alt="" />
       <div class="wrapper">
         <h1 class="visually-hidden">
           Сервис для путешествий "Погнали!"
         </h1>
-        <p class="home__header-01">
+        <p class="home-page__heading-01">
           В путешествие с крутыми попутчиками!
         </p>
         <div class="hero__actions">
@@ -92,31 +92,43 @@
               mail@htmlacademy.ru
             </a>
           </div>
-          <button class="home-auth auth" type="button">Авторизация</button>
+          <button class="home-page-auth auth" type="button">Авторизация</button>
         </div>
         <blockquote class="hero__quote">
-          <p class="hero__quote-text text-01">
+          <p class="hero__quote-text">
             «Лучшее приложение, что я видел в жизни!»
           </p>
-          <cite class="hero__quote-text text-02">
+          <cite class="hero__quote-text">
             Мурат Эльтазин главный редактор газеты «гаджетлайф»
           </cite>
         </blockquote>
         <ol class="hero__steps">
           <li class="hero__steps-item">
-            Выберите направление
+            Выберите<br>
+            направление
+            <span class="hero__steps-number">1</span>
           </li>
           <li class="hero__steps-item">
-            Изучите идеи путешественников
+            Изучите идеи<br>
+            путешественников
+            <span class="hero__steps-number">2</span>
           </li>
           <li class="hero__steps-item">
-            Находите тех, кто похож на вас
+            Находите тех,<br>
+            кто похож на вас
+            <span class="hero__steps-number">3</span>
           </li>
           <li class="hero__steps-item">
-            Путешествуйте вместе!
+            Путешествуйте<br>
+            вместе!
+            <span class="hero__steps-number">4</span>
           </li>
         </ol>
-        <h2 class="home__header-02">О сервисе</h2>
+      </div>
+    </div>
+    <div class="home-page__fold">
+      <div class="wrapper">
+        <h2 class="home-page__heading-02">О сервисе</h2>
         <p class="text-01">
           Любое путешествие веселее
           с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в
@@ -125,17 +137,18 @@
         <p class="text-02">
           А если найдете кого-то близкого по духу — скорее зовите в совместный трип!
         </p>
+
+        <img src="img/about-mobile.png" width="292" height="353" alt="" />
       </div>
-      <img src="img/about-mobile.png" width="292" height="353" alt="" />
     </div>
-    <div class="home__fold-02">
+    <div class="home-page__fold">
       <div class="wrapper">
-        <h2 class="home__header-02">Направления</h2>
+        <h2 class="home-page__heading-02">Направления</h2>
         <p class="text-01">
           Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно
           там заняться.
         </p>
-        <div class="home__cards">
+        <div class="home-page__cards">
           <div class="country">
             <img class="country__image" src="img/thailand-mobile-1.png" width="270" height="110" alt="" />
             <div class="country__inner">
@@ -172,18 +185,18 @@
               </div>
             </div>
           </div>
-          <a class="home__cards-button home__button-02" href="#" target="_blank">
+          <a class="home-page__cards-button home-page__button-02" href="#" target="_blank">
             Показать все
           </a>
         </div>
       </div>
     </div>
-    <div class="companions home__fold-01">
+    <div class="home-page__fold companions">
       <img class="companions__image-01" src="img/back.svg" width="113" height="132" alt="" />
       <img class="companions__image-02" src="img/smolov-back-desktop.png" width="143" height="143" alt="" />
       <img class="companions__image-03" src="img/rogovaya-back-desktop.png" width="64" height="71" alt="" />
       <div class="wrapper">
-        <h2 class="home__header-02">Попутчики</h2>
+        <h2 class="home-page__heading-02">Попутчики</h2>
         <p class="text-01">
           Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому
           маршрут для хайкинга.
@@ -191,8 +204,8 @@
         <p class="text-02">
           Теперь можно легко найти единомышленников!
         </p>
-        <div class="home__cards">
-          <div class="home-travaler traveler">
+        <div class="home-page__cards">
+          <div class="home-page-travaler traveler">
             <img class="traveler__photo" src="img/firsova.png" width="270" height="270" alt="" />
             <div class="traveler__score">
               <p>99<span>level</span></p>
@@ -224,7 +237,7 @@
                   #смузи
                 </a>
               </p>
-              <ul class="home-transport trasport">
+              <ul class="home-page-transport trasport">
                 <li class="trasport__item">
                   <button class="trasport__button">
                     <img class="transport-item transport-item--active" src="img/icon_plane.svg" width="18" height="19"
@@ -251,7 +264,7 @@
               </ul>
             </div>
           </div>
-          <div class="home-travaler traveler">
+          <div class="home-page-travaler traveler">
             <img class="traveler__photo" src="img/demin-desktop-2.png" width="270" height="270" alt="" />
             <div class="traveler__score">
               <p>80<span>level</span></p>
@@ -306,19 +319,19 @@
               </ul>
             </div>
           </div>
-          <a class="home__cards-button home__button-02" href="#" target="_blank">
+          <a class="home-page__cards-button home-page__button-02" href="#" target="_blank">
             Показать всех
           </a>
         </div>
       </div>
     </div>
-    <div class="tariffs home__fold-02">
+    <div class="home-page__fold tariffs">
       <div class="wrapper">
         <h2 class="visually-hidden">Тарифы</h2>
-        <p class="home__header-02">Добавьте свой профиль</p>
+        <p class="home-page__heading-02">Добавьте свой профиль</p>
         <img src="img/rates.png" width="100" height="100" alt="" />
         <div class="tariffs__inner">
-          <dl class="home-offers offers">
+          <dl class="home-page-offers offers">
             <dt class="offers__term">Базовое размещение</dt>
             <dd class="offers__desc">Бесплатно</dd>
             <dt class="offers__term">Вывод на первых позициях</dt>
@@ -332,10 +345,10 @@
         </div>
       </div>
     </div>
-    <div class="connection home__fold-01">
+    <div class="home-page__fold connection">
       <div class="wrapper">
         <h2 class="visually-hidden">Контакты</h2>
-        <p class="home__header-02 center">Заинтересовались?</p>
+        <p class="home-page__heading-02 center">Заинтересовались?</p>
         <p class="text-01 center">
           Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее
           <a class="connection__link" href="#" target="_blank">
@@ -364,7 +377,7 @@
         </div>
       </div>
     </div>
-    <div class="home__fold-03 address">
+    <div class="home-page__fold address">
       <div class="wrapper">
         <div class="address__wrapper">
           <img class="address__icon" src="img/map_mark.svg" width="45" height="45" alt="" />
@@ -378,7 +391,7 @@
         </a>
       </div>
     </div>
-    <div class="map" style="position:relative;overflow:hidden;">
+    <div class="home-page__fold map">
       <a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps"
         style="color:#eee;font-size:12px;position:absolute;top:0px;">
         Санкт‑Петербург
@@ -387,7 +400,7 @@
         style="color:#eee;font-size:12px;position:absolute;top:14px;">
         Большая Конюшенная улица, 19/8 — Яндекс.Карты
       </a>
-      <iframe src="https://yandex.ru/map-widget/v1/-/CCUiQ6dbgD" width="560" height="400" style="position:relative;">
+      <iframe class="map__iframe" src="https://yandex.ru/map-widget/v1/-/CCUiQ6dbgD">
       </iframe>
     </div>
   </main>

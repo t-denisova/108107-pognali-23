@@ -1,2 +1,46 @@
-// Начните писать стили здесь
+//--------------
+// Global
+//--------------
+@import './colors.scss';
+@import './font-face.scss';
+@import './typogrphy.scss';
+@import './helper-classes.scss';
+@import './body.scss';
+@import './normalize.scss';
+
+//--------------
+// Containers
+//--------------
+@import './home-page.scss';
+@import './inner-page.scss';
+@import './form.scss';
+@import './hero.scss';
+@import './connection.scss';
+@import './address.scss';
+
+//--------------
+// Components
+//--------------
+@import './button.scss';
+@import './calendar.scss';
+@import './checkbox.scss';
+@import './choose-country.scss';
+@import './contacts.scss';
+@import './country.scss';
+@import './footer.scss';
+@import './form.scss';
+@import './header.scss';
+@import './label.scss';
+@import './logo.scss';
+@import './map.scss';
+@import './modal.scss';
+@import './number.scss';
+@import './select.scss';
+@import './skiplink.scss';
+@import './socials.scss';
+@import './step.scss';
+@import './tariffs.scss';
+@import './textarea.scss';
+@import './transport.scss';
+@import './traveler.scss';
 
