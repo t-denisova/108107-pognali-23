@@ -1,0 +1,16 @@
+.inner-page__header {
+  background-color: $basic-blue;
+}
+
+.inner-page__heading-01 {
+  @include heading-01();
+  color: $basic-white;
+  margin: 0;
+}
+
+.inner-page__heading-02 {
+  @include heading-02();
+  color: $basic-blue;
+  margin: 0;
+  padding: 28px 0;
+}

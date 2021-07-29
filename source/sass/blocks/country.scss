@@ -1,0 +1,17 @@
+.country__inner {
+  background-color: $basic-white;
+  border-radius: 10px;
+  padding: 24px;
+}
+
+.country__header {
+  @include heading-03();
+  color: $basic-blue;
+}
+
+.country__desc,
+.country__users-num {
+  @include text-01();
+  color: $special-grey;
+  opacity: 0.3;
+}

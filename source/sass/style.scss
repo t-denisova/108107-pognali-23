@@ -1,1 +1,38 @@
-// Начните писать стили здесь
+//--------------
+// Global
+//--------------
+@import "./utils/normalize.css";
+@import "./utils/colors.scss";
+@import "./utils/font-face.scss";
+@import "./utils/typogrphy.scss";
+@import "./utils/helper-classes.scss";
+@import "./utils/body.scss";
+
+//--------------
+// Containers
+//--------------
+@import "./blocks/home-page.scss";
+@import "./blocks/inner-page.scss";
+@import "./blocks/form-page.scss";
+@import "./blocks/catalog-page.scss";
+@import "./blocks/hero.scss";
+@import "./blocks/connection.scss";
+@import "./blocks/address.scss";
+@import "./blocks/plans.scss";
+
+//--------------
+// Components
+//--------------
+@import "./blocks/accordion.scss";
+@import "./blocks/choose-country.scss";
+@import "./blocks/contacts.scss";
+@import "./blocks/country.scss";
+@import "./blocks/footer.scss";
+@import "./blocks/fieldset.scss";
+@import "./blocks/header.scss";
+@import "./blocks/map.scss";
+@import "./blocks/modal.scss";
+@import "./blocks/skiplink.scss";
+@import "./blocks/socials.scss";
+@import "./blocks/steps.scss";
+@import "./blocks/traveler.scss";
