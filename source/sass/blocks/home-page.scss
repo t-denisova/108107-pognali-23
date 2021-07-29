@@ -45,7 +45,7 @@
 .home-page__fold--03 {
   @include home-page__fold(100px);
   z-index: 6;
-  background-color: #edeff6;
+  background-color: $basic-lavander-10;
 }
 
 .home-page__fold--04 {
@@ -58,7 +58,7 @@
 .home-page__fold--05 {
   @include home-page__fold(100px);
   z-index: 4;
-  background-color: #e6e8f1;
+  background-color: $basic-lavander-20;
 }
 
 .home-page__fold--06 {

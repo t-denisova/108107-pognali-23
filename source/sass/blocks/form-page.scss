@@ -8,13 +8,13 @@
 
 .form-page__fold--01 {
   @include form-page__fold(50px);
-  background-color: #dfe3f0;
+  background-color: $special-blue-light;
   color: $basic-blue;
 }
 
 .form-page__fold--02 {
   @include form-page__fold(44px);
-  background-color: #d4d9eb;
+  background-color: $basic-lavander-40;
   color: $basic-blue;
 }
 
@@ -25,7 +25,7 @@
   height: 30px;
   bottom: -30px;
   left: 0;
-  background-color: #d4d9eb;
+  background-color: $basic-lavander-40;
 }
 
 .form-page__traveler {

@@ -6,7 +6,7 @@
 
 .country__header {
   @include heading-03();
-  color: #000000;
+  color: $basic-blue;
 }
 
 .country__desc,
