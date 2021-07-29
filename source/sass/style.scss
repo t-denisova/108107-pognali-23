@@ -1,38 +1,38 @@
 //--------------
 // Global
 //--------------
-
-@import "./colors.scss";
-@import "./font-face.scss";
-@import "./typogrphy.scss";
-@import "./helper-classes.scss";
-@import "./body.scss";
+@import "./utils/normalize.css";
+@import "./utils/colors.scss";
+@import "./utils/font-face.scss";
+@import "./utils/typogrphy.scss";
+@import "./utils/helper-classes.scss";
+@import "./utils/body.scss";
 
 //--------------
 // Containers
 //--------------
-@import "./home-page.scss";
-@import "./inner-page.scss";
-@import "./form-page.scss";
-@import "./catalog-page.scss";
-@import "./hero.scss";
-@import "./connection.scss";
-@import "./address.scss";
-@import "./plans.scss";
+@import "./blocks/home-page.scss";
+@import "./blocks/inner-page.scss";
+@import "./blocks/form-page.scss";
+@import "./blocks/catalog-page.scss";
+@import "./blocks/hero.scss";
+@import "./blocks/connection.scss";
+@import "./blocks/address.scss";
+@import "./blocks/plans.scss";
 
 //--------------
 // Components
 //--------------
-@import "./accordion.scss";
-@import "./choose-country.scss";
-@import "./contacts.scss";
-@import "./country.scss";
-@import "./footer.scss";
-@import "./fieldset.scss";
-@import "./header.scss";
-@import "./map.scss";
-@import "./modal.scss";
-@import "./skiplink.scss";
-@import "./socials.scss";
-@import "./steps.scss";
-@import "./traveler.scss";
+@import "./blocks/accordion.scss";
+@import "./blocks/choose-country.scss";
+@import "./blocks/contacts.scss";
+@import "./blocks/country.scss";
+@import "./blocks/footer.scss";
+@import "./blocks/fieldset.scss";
+@import "./blocks/header.scss";
+@import "./blocks/map.scss";
+@import "./blocks/modal.scss";
+@import "./blocks/skiplink.scss";
+@import "./blocks/socials.scss";
+@import "./blocks/steps.scss";
+@import "./blocks/traveler.scss";
