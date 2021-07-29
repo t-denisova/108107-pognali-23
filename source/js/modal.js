@@ -3,8 +3,7 @@
   const button = document.querySelector('.tariffs__button');
   button.addEventListener('click',
   () => {
-    console.log('ddd');
-    const elems = document.querySelectorAll('body  > *');
+    const elems = document.querySelectorAll('body > *');
     Array.prototype.forEach.call(elems, elem => {
       elem.setAttribute('inert', 'inert');
     })
