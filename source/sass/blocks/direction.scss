@@ -1,0 +1,75 @@
+.directions {
+  padding-bottom: 34px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 80px;
+    background-image: url("../../img/flags-back.png");
+    background-repeat: no-repeat;
+    background-size: 288px auto;
+    background-position: top right 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 172px;
+  }
+}
+
+.directions__inner {
+  @include home-page__inner();
+  margin-left: 25px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+}
+
+.directions__heading {
+  @include home-page__heading-02();
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 60px;
+  }
+}
+
+.directions__text {
+  @include home-page__text-01();
+  margin-bottom: 60px;
+  max-width: 308px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 100px;
+    max-width: 50%;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 378px;
+  }
+}
+
+.directions__country-cards {
+  @media (min-width: $tablet-width) {
+    margin: 0 35px 46px 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+  }
+}
+
+.directions__button {
+  @media (min-width: $desktop-width) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+}

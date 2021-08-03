@@ -1,0 +1,31 @@
+.tariffs {
+  padding-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 65px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 85px;
+  }
+}
+
+.tariffs__heading {
+  @include home-page__heading-02();
+  margin-left: 25px;
+  width: 50%;
+
+  @media (min-width: $tablet-width) {
+    text-align: center;
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.tariffs__offers {
+  margin-top: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 80px;
+  }
+}

@@ -3,29 +3,98 @@
   z-index: 1;
 }
 
-.home-page__heading-01 {
-  @include heading-01();
-  color: $basic-white;
-  text-align: center;
+@mixin home-page__inner {
+  margin-left: 25px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 35px;
+  }
 }
 
-.home-page__heading-02 {
-  @include heading-02();
+@mixin home-page__heading-01 {
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 60px;
+    line-height: 70px;
+  }
+}
+
+@mixin home-page__heading-02 {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  font-style: normal;
   color: $special-orange;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 45px;
+    line-height: 45px;
+  }
 }
 
-.home-page__heading-02--center {
-  text-align: center;
+@mixin home-page__text-01 {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 300;
+  font-style: normal;
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 33px;
+  }
+}
+
+@mixin home-page__text-01--short {
+  max-width: 308px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 50%;
+  }
+}
+
+@mixin home-page__text-02 {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+  font-style: normal;
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+    line-height: 25px;
+  }
+}
+
+@mixin home-page__text-02--short {
+  max-width: 308px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 40%;
+  }
 }
 
 @mixin home-page__fold($padding-top) {
   position: relative;
   padding-top: $padding-top;
-  padding-bottom: 30px;
   margin-top: -30px;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: -60px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
 }
 
 .home-page__fold--01 {
@@ -33,45 +102,77 @@
   z-index: 8;
   background-color: $basic-blue;
   color: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    background-color: $bg-blue;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $basic-blue;
+  }
 }
 
 .home-page__fold--02 {
   @include home-page__fold(30px);
   z-index: 7;
-  background-color: $basic-blue;
+  background-color: $bg-blue;
   color: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    @include home-page__fold(130px);
+  }
 }
 
 .home-page__fold--03 {
-  @include home-page__fold(100px);
+  @include home-page__fold(80px);
   z-index: 6;
   background-color: $basic-lavander-10;
+
+  @media (min-width: $tablet-width) {
+    @include home-page__fold(200px);
+  }
 }
 
 .home-page__fold--04 {
-  @include home-page__fold(100px);
+  @include home-page__fold(80px);
   z-index: 5;
-  background-color: $basic-blue;
+  background-color: $bg-blue;
   color: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    @include home-page__fold(134px);
+  }
 }
 
 .home-page__fold--05 {
-  @include home-page__fold(100px);
+  @include home-page__fold(80px);
   z-index: 4;
-  background-color: $basic-lavander-20;
+  background-color: $basic-lavander-10;
+
+  @media (min-width: $tablet-width) {
+    @include home-page__fold(134px);
+  }
 }
 
 .home-page__fold--06 {
-  @include home-page__fold(100px);
+  @include home-page__fold(80px);
   z-index: 3;
   background-color: $basic-blue;
   color: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    @include home-page__fold(130px);
+  }
 }
 
 .home-page__fold--07 {
   @include home-page__fold(65px);
   z-index: 2;
   background-color: $basic-yellow;
+
+  @media (min-width: $tablet-width) {
+    @include home-page__fold(108px);
+  }
 }
 
 .home-page__fold--08 {

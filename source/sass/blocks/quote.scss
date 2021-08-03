@@ -1,0 +1,11 @@
+.quote {
+  position: relative;
+}
+
+.quote__text-01 {
+  @include home-page__text-01();
+}
+
+.quote__text-02 {
+  @include home-page__text-02();
+}

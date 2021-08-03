@@ -4,5 +4,22 @@
   background-color: $basic-white;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-  padding: 24px;
+}
+
+.footer__inner {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 46px;
+    padding-bottom: 38px;
+  }
+}
+
+.footer__credits {
+  display: flex;
+  justify-content: space-between;
 }

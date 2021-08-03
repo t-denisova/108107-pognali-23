@@ -1,0 +1,23 @@
+.actions {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.actions--reveal {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: auto;
+  }
+}
+
+.actions--mobile {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
