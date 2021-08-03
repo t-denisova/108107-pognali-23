@@ -9,98 +9,154 @@
   <link rel="stylesheet" href="./css/style.css">
   <script src="https://unpkg.com/wicg-inert@1.1.6/dist/inert.js" defer></script>
   <script src="js/modal.js" defer></script>
+  <script src="js/switcher.js" defer></script>
 </head>
 
 <body>
   <a class="skiplink" href="#main">
     Перейти к основному контенту
   </a>
-  <header class="header header--opened">
-    <a class="header__logo logo" href="#">
-      <img src="img/logo_mobile.svg" width="96" height="15" alt="Погнали" />
-    </a>
-    <button class="header__action" aria-label="Меню" type="button">
-      <img src="img/icon_menu_mobile.svg" width="25" height="11" alt="Меню" />
-    </button>
-    <div class="header__module">
-      <nav class="header__menu">
-        <ul class="header__menu-list">
-          <li class="header__menu-item">
-            <a class="header__menu-link" href="#" target="_blank">
+  <header class="header">
+    <div class="header__wrapper">
+
+      <a class="header__logo logo" href="./">
+        <img src="img/logo_mobile.svg" width="96" height="15" alt="Погнали" />
+      </a>
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="#" target="_blank">
               О сервисе
             </a>
           </li>
-          <li class="header__menu-item">
-            <a class="header__menu-link" href="./form.html" target="_blank">
+          <li class="menu__item">
+            <a class="menu__link" href="./form.html" target="_blank">
               Направления
             </a>
           </li>
-          <li class="header__menu-item">
-            <a class="header__menu-link" href="#" target="_blank">
+          <li class="menu__item">
+            <a class="menu__link" href="./catalog.html" target="_blank">
               Попутчики
             </a>
           </li>
         </ul>
       </nav>
-      <div class="header__contacts contacts">
-        <a class="contacts__link" href="tel:88005558628" target="_blank">
-          <img class="contacts__icon" src="img/icon_telephone.svg" width="18" height="17" alt="" />
-          8 800 555-86-28
-        </a>
-        <a class="contacts__link" href="mailto:mail@htmlacademy.ru" target="_blank">
-          <img class="contacts__icon" src="img/icon_mail.svg" width="18" height="17" alt="" />
-          mail@htmlacademy.ru
-        </a>
+      <button class="header__action" aria-label="Меню" type="button">
+        <img src="img/icon_menu_mobile.svg" width="25" height="11" alt="Меню" />
+      </button>
+      <div class="actions actions--reveal">
+        <div class="contacts contacts--compact">
+          <a class="contacts__link" href="tel:88005558628" target="_blank">
+            <span class="contacts__icon-wrapper">
+              <img class="contacts__icon contacts__icon--full" src="img/icon_telephone.svg" width="18" height="18" alt="" />
+              <img class="contacts__icon contacts__icon--compact" src="img/icon_call.svg" width="18" height="18" alt="" />
+            </span>
+            <span class="contacts__text">8 800 555-86-28</span>
+          </a>
+          <a class="contacts__link" href="mailto:mail@htmlacademy.ru" target="_blank">
+            <span class="contacts__icon-wrapper">
+              <img class="contacts__icon contacts__icon--full" src="img/icon_mail.svg" width="18" height="18" alt="" />
+              <img class="contacts__icon contacts__icon--compact" src="img/icon_email.svg" width="18" height="18" alt="" />
+            </span>
+            <span class="contacts__text">mail@htmlacademy.ru</span>
+          </a>
+        </div>
+        <button class="home-page__auth auth" type="button">Авторизация</button>
       </div>
-      <button class="header__auth auth" type="button">Авторизация</button>
-      <ul class="header__socials socials">
-        <li class="socials__item">
-          <a class="socials__link" href="#" target="_blank">
-            <img src="img/icon_facebook.svg" width="11" height="21" alt="Фейсбук" />
+    </div>
+  </header>
+  <div class="switcher">
+    <nav class="switcher__menu menu menu--mobile">
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a class="menu__link" href="#" target="_blank">
+            О сервисе
           </a>
         </li>
-        <li class="socials__item">
-          <a class="socials__link" href="#" target="_blank">
-            <img src="img/icon_vkontakte.svg" width="22" height="11" alt="ВКонтакте" />
+        <li class="menu__item">
+          <a class="menu__link" href="./form.html" target="_blank">
+            Направления
           </a>
         </li>
-        <li class="socials__item">
-          <a class="socials__link" href="#" target="_blank">
-            <img src="img/icon_instagram.svg" width="18" height="18" alt="Инстаграм" />
+        <li class="menu__item">
+          <a class="menu__link" href="./catalog.html" target="_blank">
+            Попутчики
           </a>
         </li>
       </ul>
+    </nav>
+    <button class="switcher__auth auth" type="button">Авторизация</button>
+    <div class="switcher__contacts contacts">
+      <a class="contacts__link" href="tel:88005558628" target="_blank">
+      <span class="contacts__icon-wrapper">
+        <img class="contacts__icon contacts__icon--full" src="img/icon_telephone.svg" width="18" height="18" alt="" />
+        <img class="contacts__icon contacts__icon--compact" src="img/icon_call.svg" width="18" height="18" alt="" />
+      </span>
+      <span class="contacts__text">8 800 555-86-28</span>
+
+    </a>
+    <a class="contacts__link" href="mailto:mail@htmlacademy.ru" target="_blank">
+      <span class="contacts__icon-wrapper">
+        <img class="contacts__icon contacts__icon--full" src="img/icon_mail.svg" width="18" height="18" alt="" />
+        <img class="contacts__icon contacts__icon--compact" src="img/icon_email.svg" width="18" height="18" alt="" />
+      </span>
+      <span class="contacts__text">mail@htmlacademy.ru</span>
+    </a>
     </div>
-  </header>
+    <ul class="switcher__socials socials">
+      <li class="socials__item">
+        <a class="socials__link" href="#" target="_blank">
+          <img src="img/icon_facebook.svg" width="11" height="21" alt="Фейсбук" />
+        </a>
+      </li>
+      <li class="socials__item">
+        <a class="socials__link" href="#" target="_blank">
+          <img src="img/icon_vkontakte.svg" width="22" height="11" alt="ВКонтакте" />
+        </a>
+      </li>
+      <li class="socials__item">
+        <a class="socials__link" href="#" target="_blank">
+          <img src="img/icon_instagram.svg" width="18" height="18" alt="Инстаграм" />
+        </a>
+      </li>
+    </ul>
+  </div>
   <main class="home-page" id="main">
-    <div class="home-page__fold home-page__fold--01 hero">
-      <img class="hero__image-01" src="img/globe-back-mobile-1.png" width="320" height="569" alt="" />
-      <img class="hero__image-02" src="img/traveller-illustration-mobile-1.png" width="192" height="255" alt="" />
-      <div class="wrapper">
+    <div class="home-page__fold home-page__fold--01">
+      <div class="wrapper hero">
         <h1 class="visually-hidden">
           Сервис для путешествий "Погнали!"
         </h1>
-        <p class="home-page__heading-01">
+        <p class="hero__heading">
           В путешествие с&nbsp;крутыми попутчиками!
         </p>
-        <div class="hero__actions">
-          <div class="hero-contacts contacts">
+        <div class="hero__image-wrapper">
+          <img class="hero__image" src="img/traveller-illustration-mobile-1.png" width="192" height="255" alt="" />
+        </div>
+        <div class="actions actions--mobile">
+          <div class="contacts contacts--compact">
             <a class="contacts__link" href="tel:88005558628" target="_blank">
-              <img class="contacts__icon" src="img/icon_call.svg" width="18" height="18" alt="" />
-              8 800 555-86-28
+              <span class="contacts__icon-wrapper">
+                <img class="contacts__icon contacts__icon--full" src="img/icon_telephone.svg" width="18" height="18" alt="" />
+                <img class="contacts__icon contacts__icon--compact" src="img/icon_call.svg" width="18" height="18" alt="" />
+              </span>
+              <span class="contacts__text">8 800 555-86-28</span>
             </a>
             <a class="contacts__link" href="mailto:mail@htmlacademy.ru" target="_blank">
-              <img class="contacts__icon" src="img/icon_email.svg" width="18" height="18" alt="" />
-              mail@htmlacademy.ru
+              <span class="contacts__icon-wrapper">
+                <img class="contacts__icon contacts__icon--full" src="img/icon_mail.svg" width="18" height="18" alt="" />
+                <img class="contacts__icon contacts__icon--compact" src="img/icon_email.svg" width="18" height="18" alt="" />
+              </span>
+              <span class="contacts__text">mail@htmlacademy.ru</span>
             </a>
           </div>
           <button class="home-page__auth auth" type="button">Авторизация</button>
         </div>
-        <blockquote class="hero__quote">
-          <p class="hero__quote-text">
+        <blockquote class="hero__quote quote">
+          <p class="quote__text-01">
             «Лучшее приложение, что я видел в жизни!»
           </p>
-          <cite class="hero__quote-text">
+          <cite class="quote__text-02">
             Мурат Эльтазин главный редактор газеты «гаджетлайф»
           </cite>
         </blockquote>
@@ -128,86 +184,88 @@
         </ol>
       </div>
     </div>
-    <div class="home-page__fold home-page__fold--02 about">
-      <div class="wrapper">
-        <h2 class="home-page__heading-02">О сервисе</h2>
-        <p class="text-01">
-          Любое путешествие веселее
-          с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в
-          чужих.
-        </p>
-        <p class="text-02">
-          А если найдете кого-то близкого по духу — скорее зовите в совместный трип!
-        </p>
-
-        <img src="img/about-mobile.png" width="292" height="353" alt="" />
+    <div class="home-page__fold home-page__fold--02">
+      <div class="wrapper about">
+        <div class="about__inner">
+          <h2 class="about__heading">О сервисе</h2>
+          <p class="about__text-01">
+            Любое путешествие веселее
+            с&nbsp;попутчиками, которые на&nbsp;одной волне с&nbsp;тобой! Делитесь своими идеями путешествий и&nbsp;черпайте вдохновение в&nbsp;чужих.
+          </p>
+          <p class="about__text-02">
+            А если найдете кого-то близкого по&nbsp;духу — скорее зовите в&nbsp;совместный трип!
+          </p>
+          <button class="about__button">Подробнее</button>
+        </div>
+        <img class="about__image"  src="./img/about-mobile.png" width="292" height="353" />
       </div>
     </div>
-    <div class="home-page__fold home-page__fold--03 directions">
-      <div class="wrapper">
-        <h2 class="home-page__heading-02">Направления</h2>
-        <p class="text-01">
-          Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно
-          там заняться.
-        </p>
-        <div class="home-page__cards">
-          <div class="country">
-            <img class="country__image" src="img/thailand-mobile-1.png" width="270" height="110" alt="" />
-            <div class="country__inner">
-              <img class="country__flag" src="img/thailand-1.png" width="35" height="24" alt="" />
-              <h3 class="country__header">Тайланд</h3>
-              <p class="country__desc">Джунгли зовут!</p>
-              <div class="country__users-num">
+    <div class="home-page__fold home-page__fold--03">
+      <div class="wrapper directions">
+        <div class="directions__inner">
+          <h2 class="directions__heading">Направления</h2>
+          <p class="directions__text">
+            Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно
+            там заняться.
+          </p>
+        </div>
+        <div class="directions__country-cards country-cards">
+          <div class="country-cards__item">
+            <img class="country-cards__image" src="img/thailand-mobile-1.png" width="270" height="110" alt="" />
+            <div class="country-cards__inner">
+              <img class="country-cards__flag" src="img/thailand-1.png" width="35" height="24" alt="" />
+              <h3 class="country-cards__header">Тайланд</h3>
+              <p class="country-cards__desc">Джунгли зовут!</p>
+              <div class="country-cards__users-num">
                 <img src="img/icon_user.svg" width="14" height="14" alt="" />
                 <span>18321</span>
               </div>
             </div>
           </div>
-          <div class="country">
-            <img class="country__image" src="img/france-mobile-1.png" width="270" height="110" alt="" />
-            <div class="country__inner">
-              <img class="country__flag" src="img/france-1.png" width="35" height="24" alt="" />
-              <h3 class="country__header">Франция</h3>
-              <p class="country__desc">Трэ бьен, манифик!</p>
-              <div class="country__users-num">
+          <div class="country-cards__item">
+            <img class="country-cards__image" src="img/france-mobile-1.png" width="270" height="110" alt="" />
+            <div class="country-cards__inner">
+              <img class="country-cards__flag" src="img/france-1.png" width="35" height="24" alt="" />
+              <h3 class="country-cards__header">Франция</h3>
+              <p class="country-cards__desc">Трэ бьен, манифик!</p>
+              <div class="country-cards__users-num">
                 <img src="img/icon_user.svg" width="14" height="14" alt="" />
                 <span>12518</span>
               </div>
             </div>
           </div>
-          <div class="country">
-            <img class="country__image" src="img/france-mobile-1.png" width="270" height="110" alt="" />
-            <div class="country__inner">
-              <img class="country__flag" src="img/czech-1.png" width="35" height="24" alt="" />
-              <h3 class="country__header">Чехия</h3>
-              <p class="country__desc">Закоулки старой Европы</p>
-              <div class="country__users-num">
+          <div class="country-cards__item">
+            <img class="country-cards__image" src="img/france-mobile-1.png" width="270" height="110" alt="" />
+            <div class="country-cards__inner">
+              <img class="country-cards__flag" src="img/czech-1.png" width="35" height="24" alt="" />
+              <h3 class="country-cards__header">Чехия</h3>
+              <p class="country-cards__desc">Закоулки старой Европы</p>
+              <div class="country-cards__users-num">
                 <img src="img/icon_user.svg" width="14" height="14" alt="" />
                 <span>5326</span>
               </div>
             </div>
           </div>
-          <a class="home-page__cards-button home-page__button-02" href="#" target="_blank">
-            Показать все
-          </a>
         </div>
+        <a class="directions__button" href="#" target="_blank">
+          Показать все
+        </a>
       </div>
     </div>
-    <div class="home-page__fold home-page__fold--04 companions">
-      <img class="companions__image-01" src="img/back.svg" width="113" height="132" alt="" />
-      <img class="companions__image-02" src="img/smolov-back-desktop.png" width="143" height="143" alt="" />
-      <img class="companions__image-03" src="img/rogovaya-back-desktop.png" width="64" height="71" alt="" />
-      <div class="wrapper">
-        <h2 class="home-page__heading-02">Попутчики</h2>
-        <p class="text-01">
-          Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому
-          маршрут для хайкинга.
-        </p>
-        <p class="text-02">
-          Теперь можно легко найти единомышленников!
-        </p>
-        <div class="home-page__cards">
-          <div class="home-page__travaler traveler">
+    <div class="home-page__fold home-page__fold--04">
+      <div class="wrapper companions">
+        <div class="companions__inner">
+          <h2 class="companions__heading">Попутчики</h2>
+          <p class="companions__text-01">
+            Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому
+            маршрут для хайкинга.
+          </p>
+          <p class="companions__text-02">
+            Теперь можно легко найти единомышленников!
+          </p>
+        </div>
+        <div class="companions__cards">
+          <div class="traveler">
             <img class="traveler__photo" src="img/firsova.png" width="270" height="270" alt="" />
             <div class="traveler__score">
               <p>99<span>level</span></p>
@@ -266,7 +324,7 @@
               </ul>
             </div>
           </div>
-          <div class="home-page__travaler traveler">
+          <div class="traveler">
             <img class="traveler__photo" src="img/demin-desktop-2.png" width="270" height="270" alt="" />
             <div class="traveler__score">
               <p>80<span>level</span></p>
@@ -321,41 +379,49 @@
               </ul>
             </div>
           </div>
-          <a class="home-page__cards-button home-page__button-02" href="#" target="_blank">
-            Показать всех
-          </a>
         </div>
+        <a class="companions__button" href="#" target="_blank">
+          Показать всех
+        </a>
       </div>
     </div>
-    <div class="home-page__fold home-page__fold--05 tariffs">
-      <div class="wrapper">
+    <div class="home-page__fold home-page__fold--05">
+      <div class="wrapper tariffs">
         <h2 class="visually-hidden">Тарифы</h2>
-        <p class="home-page__heading-02">Добавьте свой профиль</p>
-        <img src="img/rates.png" width="100" height="100" alt="" />
-        <div class="tariffs__inner">
-          <dl class="home-page-offers offers">
+        <p class="tariffs__heading">Добавьте свой профиль</p>
+        <dl class="tariffs__offers offers">
+          <div class="offers__item">
             <dt class="offers__term">Базовое размещение</dt>
+            <dd class="offers__num">1</dd>
             <dd class="offers__desc">Бесплатно</dd>
+          </div>
+          <div class="offers__item">
             <dt class="offers__term">Вывод на первых позициях</dt>
+            <dd class="offers__num">2</dd>
             <dd class="offers__desc">99 руб./мес</dd>
+          </div>
+          <div class="offers__item">
             <dt class="offers__term">Кастомный цвет карточких</dt>
+            <dd class="offers__num">3</dd>
             <dd class="offers__desc">59 руб./мес</dd>
-          </dl>
-          <button class="tariffs__button" type="button">
-            Показать тарифы для бизнеса
-          </button>
+          </div>
+        </dl>
+        <button class="tariffs__button" type="button">
+          Показать тарифы для бизнеса
+        </button>
+        </div>
         </div>
       </div>
     </div>
-    <div class="home-page__fold home-page__fold--06 connection">
-      <div class="wrapper">
+    <div class="home-page__fold home-page__fold--06">
+      <div class="wrapper connection">
         <h2 class="visually-hidden">Контакты</h2>
-        <p class="home-page__heading-02">Заинтересовались?</p>
-        <p class="text-01">
-          Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее
-          <a class="connection__link" href="#" target="_blank">
-            авторизуйтесь
-          </a>.
+        <p class="connection__heading">Заинтересовались?</p>
+        <p class="connection__text">
+          Зарегистрируйтесь, это быстро и бесплатно!
+          <br>
+          Уже зарегистрированы? Тогда скорее
+          <a class="connection__link" href="#" target="_blank">авторизуйтесь</a>.
         </p>
         <form class="connection__form" action="https://echo.htmlacademy.ru" method="post">
           <input class="connection__input" name="email" type="email" placeholder="E-mail" required />
@@ -363,7 +429,7 @@
             Отправить
           </button>
         </form>
-        <p class="text-01">
+        <p class="connection__text">
           Остались вопросы?
           Мы с радостью на них ответим!
         </p>
@@ -379,18 +445,18 @@
         </div>
       </div>
     </div>
-    <div class="home-page__fold home-page__fold--07 address">
-      <div class="wrapper">
-        <div class="address__wrapper">
-          <img class="address__icon" src="img/map_mark.svg" width="45" height="45" alt="" />
-          <span class="address__text">
-            ул. Большая
-            Конюшенная, 19/8
-          </span>
-        </div>
-        <a class="address__button" href="#" target="_blank">
-          Проложить маршрут
-        </a>
+    <div class="home-page__fold home-page__fold--07">
+      <div class="wrapper address">
+          <div class="address__wrapper">
+            <img class="address__icon" src="img/map_mark.svg" width="45" height="45" alt="" />
+            <span class="address__text">
+              ул. Большая
+              Конюшенная,&nbsp;19/8
+            </span>
+          </div>
+          <a class="address__button" href="#" target="_blank">
+            Проложить маршрут
+          </a>
       </div>
     </div>
     <div class="home-page__fold home-page__fold--08 map">
@@ -407,7 +473,7 @@
     </div>
   </main>
   <footer class="footer" role="contentinfo">
-    <div class="wrapper">
+    <div class="wrapper footer__inner">
       <a class="footer__logo logo" href="#">
         <img src="img/logo_mobile.svg" width="96" height="15" alt="Погнали" />
       </a>

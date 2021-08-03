@@ -1,0 +1,71 @@
+.offers {
+  position: relative;
+}
+
+.offers::before {
+  @media (min-width: $tablet-width) {
+    content: '';
+    position: absolute;
+    width: 198px;
+    height: 165px;
+    background-color: $basic-lavander-50;
+    border-radius: 20px;
+    right: 0;
+    top: -20px;
+  }
+}
+
+.offers::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: url('./../../img/rates.png') no-repeat 0 0;
+    background-size: contain;
+    right: 0;
+    top: -100px;
+
+    @media (min-width: $tablet-width) {
+      right: 45px;
+      top: auto;
+      bottom: -100px;
+    }
+}
+
+.offers__item {
+  @include home-page__text-01();
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 68px 2fr 1fr;
+    grid-template-rows: auto;
+  }
+}
+
+.offers__term {
+  @media (min-width: $tablet-width) {
+    order: 2;
+  }
+}
+
+.offers__num {
+  justify-self: end;
+
+  @media (min-width: $tablet-width) {
+    justify-self: start;
+    order: 1;
+  }
+}
+
+.offers__desc {
+  position: relative;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    justify-self: end;
+    order: 3;
+    padding-right: 35px;
+  }
+}

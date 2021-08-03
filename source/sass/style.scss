@@ -5,6 +5,7 @@
 @import "./utils/colors.scss";
 @import "./utils/font-face.scss";
 @import "./utils/typogrphy.scss";
+@import "./utils/variables.scss";
 @import "./utils/helper-classes.scss";
 @import "./utils/body.scss";
 
@@ -16,6 +17,10 @@
 @import "./blocks/form-page.scss";
 @import "./blocks/catalog-page.scss";
 @import "./blocks/hero.scss";
+@import "./blocks/about.scss";
+@import "./blocks/direction.scss";
+@import "./blocks/companions.scss";
+@import "./blocks/tariffs.scss";
 @import "./blocks/connection.scss";
 @import "./blocks/address.scss";
 @import "./blocks/plans.scss";
@@ -24,15 +29,20 @@
 // Components
 //--------------
 @import "./blocks/accordion.scss";
+@import "./blocks/actions.scss";
 @import "./blocks/choose-country.scss";
 @import "./blocks/contacts.scss";
-@import "./blocks/country.scss";
+@import "./blocks/country-cards.scss";
 @import "./blocks/footer.scss";
 @import "./blocks/fieldset.scss";
 @import "./blocks/header.scss";
 @import "./blocks/map.scss";
 @import "./blocks/modal.scss";
+@import "./blocks/menu.scss";
+@import "./blocks/offers.scss";
 @import "./blocks/skiplink.scss";
 @import "./blocks/socials.scss";
 @import "./blocks/steps.scss";
+@import "./blocks/switcher.scss";
 @import "./blocks/traveler.scss";
+@import "./blocks/quote.scss";

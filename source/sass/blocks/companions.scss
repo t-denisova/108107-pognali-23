@@ -1,0 +1,98 @@
+.companions {
+  position: relative;
+  padding-bottom: 30px;
+  background-image:
+    url(../../img/smolov-back-desktop.png),
+    url(../../img/rogovaya-back-desktop.png);
+  background-repeat: no-repeat, no-repeat;
+  background-size: 143px auto, 71px auto;
+  background-position: top right 25px, top 200px left -10px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 87px;
+    background-size: 143px auto, 285px auto;
+    background-position: top 290px left 40px, top right 74px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    background-position: top left 500px, top 260px left 170px;
+  }
+}
+
+.companions::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: -30px;
+  width: 132px;
+  height: 132px;
+  background-color: $basic-blue;
+  border-radius: 20px;
+
+  @media (min-width: $tablet-width) {
+    left: 30px;
+    width: 212px;
+    height: 212px;
+  }
+}
+
+.companions__inner {
+  position: relative;
+  @include home-page__inner();
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+}
+
+.companions__heading {
+  @include home-page__heading-02();
+}
+
+.companions__text-01 {
+  @include home-page__text-01();
+  max-width: 308px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 59px;
+    max-width: 60%;
+  }
+}
+
+.companions__text-02 {
+  @include home-page__text-02();
+  margin-bottom: 54px;
+  max-width: 308px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 59px;
+    max-width: 50%;
+  }
+}
+
+.companions__cards {
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin: 0 35px 81px 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2 / 3;
+    grid-row:  1 / -1;
+  }
+}
+
+.companions__button {
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / 2;
+    grid-row:  2 / 3;
+  }
+}

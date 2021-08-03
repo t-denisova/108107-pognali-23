@@ -1,4 +1,34 @@
+.address {
+  @include home-page__inner();
+  padding-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 84px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 55px;
+  }
+}
+
+.address__wrapper {
+  display: flex;
+  margin-bottom: 33px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 44px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 0;
+  }
+}
+
 .address__text {
-  @include text-02();
+  @include home-page__text-02();
   color: $basic-blue;
+  text-transform: uppercase;
 }
