@@ -4,7 +4,7 @@
 
 .offers::before {
   @media (min-width: $tablet-width) {
-    content: '';
+    content: "";
     position: absolute;
     width: 198px;
     height: 165px;
@@ -16,20 +16,20 @@
 }
 
 .offers::after {
-    content: '';
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    background: url('./../../img/rates.png') no-repeat 0 0;
-    background-size: contain;
-    right: 0;
-    top: -100px;
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: url("./../../img/rates.png") no-repeat 0 0;
+  background-size: contain;
+  right: 0;
+  top: -100px;
 
-    @media (min-width: $tablet-width) {
-      right: 45px;
-      top: auto;
-      bottom: -100px;
-    }
+  @media (min-width: $tablet-width) {
+    right: 45px;
+    top: auto;
+    bottom: -100px;
+  }
 }
 
 .offers__item {

@@ -3,7 +3,7 @@
 
   @media (min-width: $tablet-width) {
     padding-bottom: 80px;
-    background-image: url('../../img/flags-back.png');
+    background-image: url("../../img/flags-back.png");
     background-repeat: no-repeat;
     background-size: 288px auto;
     background-position: top right 40px;
@@ -70,6 +70,6 @@
 .directions__button {
   @media (min-width: $desktop-width) {
     grid-column: 2 / 3;
-    grid-rows: 2 / 3;
+    grid-row: 2 / 3;
   }
 }
