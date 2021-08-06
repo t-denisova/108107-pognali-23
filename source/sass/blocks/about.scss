@@ -34,10 +34,21 @@
 }
 
 .about__inner {
-  @include home-page__inner();
+  padding-left: $padding-mobile-02;
+  padding-right: $padding-mobile-02;
   grid-column: 1 / -1;
   grid-row: 1 / -1;
   z-index: 2;
+
+  @media (min-width: $tablet-width) {
+    padding-left: $padding-tablet-02;
+    padding-right: $padding-tablet-02;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: $padding-desktop-03;
+    padding-right: $padding-desktop-03;
+  }
 }
 
 .about__heading {

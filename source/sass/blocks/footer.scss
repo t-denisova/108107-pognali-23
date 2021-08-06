@@ -7,11 +7,15 @@
 }
 
 .footer__inner {
+  padding-left: $padding-mobile-01;
+  padding-right: $padding-mobile-01;
   padding-top: 24px;
   padding-bottom: 24px;
   text-align: center;
 
   @media (min-width: $tablet-width) {
+    padding-left: $padding-tablet-01;
+    padding-right: $padding-tablet-01;
     display: flex;
     justify-content: space-between;
     padding-top: 46px;

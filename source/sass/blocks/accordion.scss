@@ -1,5 +1,38 @@
+.accordion__item--opened {
+  .accordion__content {
+    display: block;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+    }
+
+    @media (min-width: $desktop-width) {
+      flex-direction: column;
+    }
+  }
+}
+
 .accordion__heading {
-  @include text-02();
-  color: $basic-blue-light;
+  @include button-reset();
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
   text-transform: uppercase;
+  color: $basic-blue-light;
+}
+
+.accordion__item {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.accordion__content {
+  display: none;
 }

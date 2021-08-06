@@ -1,3 +1,18 @@
+.plans {
+  padding-left: $padding-mobile-01;
+  padding-right: $padding-mobile-01;
+
+  @media (min-width: $tablet-width) {
+    padding-left: $padding-tablet-02;
+    padding-right: $padding-tablet-02;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: $padding-desktop-02;
+    padding-right: $padding-desktop-01;
+  }
+}
+
 .plans__list {
   padding: 0;
   margin: 0;

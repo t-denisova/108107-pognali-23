@@ -5,7 +5,12 @@
 }
 
 .fieldset__label {
-  @include heading-03();
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
   color: $basic-blue-light;
-  margin: 0 0 24px 0;
+  margin-bottom: 24px;
+  width: 145px;
 }
