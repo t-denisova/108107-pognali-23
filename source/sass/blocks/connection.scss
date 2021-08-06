@@ -1,9 +1,18 @@
 .connection {
+  padding-left: $padding-mobile-01;
+  padding-right: $padding-mobile-01;
   text-align: center;
   padding-bottom: 30px;
 
   @media (min-width: $tablet-width) {
+    padding-left: $padding-tablet-02;
+    padding-right: $padding-tablet-02;
     padding-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: $padding-desktop-03;
+    padding-right: $padding-desktop-03;
   }
 }
 

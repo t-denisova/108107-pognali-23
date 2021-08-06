@@ -1,18 +1,23 @@
 .tariffs {
+  padding-left: $padding-mobile-01;
+  padding-right: $padding-mobile-01;
   padding-bottom: 30px;
 
   @media (min-width: $tablet-width) {
+    padding-left: $padding-tablet-01;
+    padding-right: $padding-tablet-01;
     padding-bottom: 65px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
+    padding-left: $padding-desktop-03;
+    padding-right: $padding-desktop-03;
     padding-bottom: 85px;
   }
 }
 
 .tariffs__heading {
   @include home-page__heading-02();
-  margin-left: 25px;
   width: 50%;
 
   @media (min-width: $tablet-width) {

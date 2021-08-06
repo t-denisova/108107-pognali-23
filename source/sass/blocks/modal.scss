@@ -21,7 +21,7 @@
 }
 
 .modal__heading {
-  @include heading-02();
+  @include home-page__heading-02();
   color: $special-orange;
   margin: 10px 0;
 }

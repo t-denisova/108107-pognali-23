@@ -1,15 +1,81 @@
 .inner-page__header {
   background-color: $basic-blue;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: relative;
+  z-index: 2;
+
+  @media (min-width: $tablet-width) {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+}
+
+.inner-page__header-wrapper {
+  padding-left: $padding-mobile-01;
+  padding-right: $padding-mobile-01;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 143px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: $padding-tablet-02;
+    padding-right: $padding-tablet-02;
+    height: 350px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: $padding-desktop-02;
+    padding-right: $padding-desktop-01;
+  }
+}
+
+.inner-page__header-inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin inner-page__heading-01 {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 70px;
+  }
+}
+
+@mixin inner-page__heading-02 {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .inner-page__heading-01 {
-  @include heading-01();
+  @include inner-page__heading-01();
   color: $basic-white;
-  margin: 0;
+  margin-top: auto;
+  margin-bottom: 12px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 66px;
+  }
 }
 
 .inner-page__heading-02 {
-  @include heading-02();
+  @include inner-page__heading-02();
   color: $basic-blue;
   margin: 0;
   padding: 28px 0;

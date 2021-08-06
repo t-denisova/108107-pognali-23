@@ -28,13 +28,13 @@
 }
 
 .country-cards__header {
-  @include heading-03();
+  @include home-page__heading-03();
   color: $basic-blue;
 }
 
 .country-cards__desc,
 .country-cards__users-num {
-  @include text-01();
+  @include home-page__text-02();
   color: $special-grey;
   opacity: 0.3;
 }

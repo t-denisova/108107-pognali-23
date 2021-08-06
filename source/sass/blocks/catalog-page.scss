@@ -9,6 +9,68 @@
   margin-top: 10px;
 }
 
+@mixin catalog-page__text-01() {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  font-style: normal;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@mixin catalog-page__text-01() {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  font-style: normal;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.catalog-page__filter-country {
+  position: relative;
+  z-index: 1;
+  margin-top: -30px;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  background-color: $basic-lavander-30;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.catalog-page__inner {
+  padding-left: $padding-mobile-01;
+  padding-right: $padding-mobile-01;
+
+  @media (min-width: $tablet-width) {
+    padding-left: $padding-tablet-02;
+    padding-right: $padding-tablet-02;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: $padding-desktop-01;
+    padding-right: $padding-desktop-01;
+    margin-top: 48px;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+.catalog-page__persons {
+  flex-grow: 1;
+
+  @media (min-width: $desktop-width) {
+    padding-right: 86px;
+  }
+}
+
 .catalog-page__controls {
   margin: 24px 0 46px 0;
+  text-align: center;
 }

@@ -6,6 +6,7 @@
   left: 0;
   height: 73px;
   background-color: transparent;
+  color: $basic-white;
 
   @media (min-width: $tablet-width) {
     height: 132px;
@@ -14,6 +15,11 @@
   @media (min-width: $desktop-width) {
     height: 90px;
   }
+}
+
+.header--on-scroll {
+  background-color: $basic-white;
+  color: $basic-blue;
 }
 
 .header__wrapper {
@@ -32,6 +38,7 @@
 
 .header--opened {
   background-color: $basic-white;
+  color: $basic-blue;
 }
 
 .header__action {

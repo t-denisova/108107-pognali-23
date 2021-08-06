@@ -1,0 +1,16 @@
+.progress {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.progress--compact {
+  display: block;
+  transform: rotate(90deg);
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}

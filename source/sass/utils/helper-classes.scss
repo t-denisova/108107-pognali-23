@@ -7,11 +7,6 @@
 }
 
 .wrapper {
-  padding: 0 25px;
   max-width: 1440px;
   margin: 0 auto;
-
-  @media (min-width: $tablet-width) {
-    padding: 0 40px;
-  }
 }

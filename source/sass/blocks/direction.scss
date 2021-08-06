@@ -18,14 +18,17 @@
 }
 
 .directions__inner {
-  @include home-page__inner();
-  margin-left: 25px;
+  padding-left: $padding-mobile-02;
+  padding-right: $padding-mobile-02;
 
   @media (min-width: $tablet-width) {
-    margin-left: 35px;
+    padding-left: $padding-tablet-02;
+    padding-right: $padding-tablet-02;
   }
 
   @media (min-width: $desktop-width) {
+    padding-left: 0;
+    padding-right: $padding-desktop-01;
     margin-left: 0;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
@@ -57,18 +60,35 @@
 }
 
 .directions__country-cards {
+  padding-left: $padding-mobile-01;
+  padding-right: $padding-mobile-01;
+
   @media (min-width: $tablet-width) {
-    margin: 0 35px 46px 35px;
+    padding-left: $padding-tablet-02;
+    padding-right: $padding-tablet-02;
+    margin-bottom: 46px;
   }
 
   @media (min-width: $desktop-width) {
+    padding-left: $padding-desktop-03;
+    padding-right: 0;
     grid-column: 1 / 2;
     grid-row: 1 / -1;
   }
 }
 
 .directions__button {
+  padding-left: $padding-mobile-01;
+  padding-right: $padding-mobile-01;
+
+  @media (min-width: $tablet-width) {
+    padding-left: $padding-tablet-02;
+    padding-right: $padding-tablet-02;
+  }
+
   @media (min-width: $desktop-width) {
+    padding-left: 0;
+    padding-right: $padding-desktop-03;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
   }
