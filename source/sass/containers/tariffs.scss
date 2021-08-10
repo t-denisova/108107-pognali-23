@@ -1,0 +1,117 @@
+.tariffs {
+  padding-left: $padding-mobile-01;
+  padding-right: $padding-mobile-01;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    padding-left: $padding-tablet-01;
+    padding-right: $padding-tablet-01;
+    padding-bottom: 95px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: $padding-desktop-03;
+    padding-right: $padding-desktop-03;
+    padding-bottom: 200px;
+  }
+}
+
+.tariffs__heading {
+  @include home-page__heading-02;
+  margin-bottom: 43px;
+  width: 50%;
+
+  @media (min-width: $tablet-width) {
+    text-align: center;
+    margin-left: 0;
+    width: 100%;
+    margin-bottom: 73px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 134px;
+  }
+}
+
+.tariffs__offers-wrapper {
+  position: relative;
+  margin-bottom: 30px;
+
+  @media (min-width: $desktop-width) {
+    max-width: 1053px;
+  }
+}
+
+.tariffs__offers-wrapper::before {
+  @media (min-width: $tablet-width) {
+    content: "";
+    position: absolute;
+    width: 198px;
+    height: 285px;
+    background-color: $basic-lavander-50;
+    border-radius: 20px;
+    right: 0;
+    top: -41px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 446px;
+    height: 300px;
+    top: -41px;
+  }
+}
+
+.tariffs__offers-wrapper::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: url("./../../img/rates.png") no-repeat 0 0;
+  background-size: contain;
+  right: 0;
+  top: -130px;
+
+  @media (min-width: $tablet-width) {
+    right: 45px;
+    top: auto;
+    bottom: -100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 198px;
+    height: 198px;
+    right: -111px;
+    bottom: 0;
+  }
+}
+
+.tariffs__button {
+  align-self: center;
+  font-size: 16px;
+  line-height: 16px;
+
+  @media (min-width: $tablet-width) {
+    align-self: flex-start;
+    font-size: 20px;
+    line-height: 20px;
+    margin-left: -8px;
+  }
+}
+
+.tariffs__button-inner {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 66px;
+    height: 66px;
+    background-color: $basic-lavander-30;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+}

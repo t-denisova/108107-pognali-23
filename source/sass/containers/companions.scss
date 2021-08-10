@@ -33,7 +33,8 @@
   border-radius: 20px;
 
   @media (min-width: $tablet-width) {
-    left: 30px;
+    top: -10px;
+    left: 40px;
     width: 212px;
     height: 212px;
   }
@@ -43,10 +44,13 @@
   padding-left: $padding-mobile-02;
   padding-right: $padding-mobile-02;
   position: relative;
+  margin-bottom: 54px;
 
   @media (min-width: $tablet-width) {
-    padding-left: $padding-tablet-02;
-    padding-right: $padding-tablet-02;
+    padding-left: $padding-tablet-03;
+    padding-right: $padding-tablet-03;
+    margin-bottom: 59px;
+    padding-top: 60px;
   }
 
   @media (min-width: $desktop-width) {
@@ -54,30 +58,37 @@
     padding-right: 0;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    margin-bottom: 85px;
+    padding-top: 0;
   }
 }
 
 .companions__heading {
-  @include home-page__heading-02();
+  @include home-page__heading-02;
+  margin-bottom: 19px;
 }
 
 .companions__text-01 {
   @include home-page__text-01();
   max-width: 308px;
+  margin-bottom: 25px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 59px;
-    max-width: 60%;
+    max-width: 70%;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 59px;
+    max-width: 427px;
   }
 }
 
 .companions__text-02 {
   @include home-page__text-02();
-  margin-bottom: 54px;
   max-width: 308px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 59px;
     max-width: 50%;
   }
 }
@@ -88,8 +99,8 @@
   padding-right: $padding-mobile-01;
 
   @media (min-width: $tablet-width) {
-    padding-left: $padding-tablet-02;
-    padding-right: $padding-tablet-02;
+    padding-left: $padding-tablet-03;
+    padding-right: $padding-tablet-03;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
@@ -101,16 +112,21 @@
     padding-right: $padding-desktop-01;
     grid-column: 2 / 3;
     grid-row: 1 / -1;
+    margin-bottom: 0;
   }
 }
 
-.companions__button {
+.companions__cards > * + * {
+  margin-top: 10px;
+}
+
+.companions__button-wrapper {
   padding-left: $padding-mobile-01;
   padding-right: $padding-mobile-01;
 
   @media (min-width: $tablet-width) {
-    padding-left: $padding-tablet-02;
-    padding-right: $padding-tablet-02;
+    padding-left: $padding-tablet-03;
+    padding-right: $padding-tablet-03;
   }
 
   @media (min-width: $desktop-width) {

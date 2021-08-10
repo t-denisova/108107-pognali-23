@@ -28,8 +28,8 @@
 
   @media (min-width: $desktop-width) {
     width: 212px;
-    left: 20px;
-    top: -30px;
+    left: 60px;
+    top: 0;
   }
 }
 
@@ -41,31 +41,37 @@
   z-index: 2;
 
   @media (min-width: $tablet-width) {
-    padding-left: $padding-tablet-02;
-    padding-right: $padding-tablet-02;
+    width: 50%;
+    padding-left: $padding-tablet-03;
+    padding-right: 0;
   }
 
   @media (min-width: $desktop-width) {
     padding-left: $padding-desktop-03;
-    padding-right: $padding-desktop-03;
   }
 }
 
 .about__heading {
-  @include home-page__heading-02();
+  @include home-page__heading-02;
   margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 57px;
   }
 }
 
 .about__text-01 {
   @include home-page__text-01();
   max-width: 308px;
+  margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
-    max-width: 50%;
+    max-width: 100%;
+    margin-bottom: 31px;
   }
 
   @media (min-width: $desktop-width) {
@@ -78,7 +84,9 @@
   max-width: 308px;
 
   @media (min-width: $tablet-width) {
-    max-width: 40%;
+    max-width: 100%;
+    margin-bottom: 52px;
+    padding-right: 10px;
   }
 
   @media (min-width: $desktop-width) {
@@ -87,10 +95,14 @@
 }
 
 .about__button {
-  display: none;
+  &.btn {
+    display: none;
+  }
 
   @media (min-width: $tablet-width) {
-    display: block;
+    &.btn {
+      display: inline-flex;
+    }
   }
 }
 

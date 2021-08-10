@@ -12,16 +12,65 @@
 
 .modal__inner {
   position: relative;
-  max-width: 492px;
   width: 100%;
+  max-width: 950px;
   background-color: $basic-white;
-  padding: 24px;
+  padding: 34px 24px 0 24px;
   margin: 0 24px;
   border-radius: 20px;
+  box-shadow: 0 4px 22px rgba(29, 46, 91, 0.18);
+
+  @media (min-width: $tablet-width) {
+    padding: 54px 90px 0 90px;
+    margin: 0 40px;
+  }
 }
 
 .modal__heading {
   @include home-page__heading-02();
-  color: $special-orange;
-  margin: 10px 0;
+  margin-bottom: 28px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 47px;
+  }
+}
+
+.modal__offers {
+  margin-bottom: 28px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 65px;
+  }
+}
+
+.modal__footer {
+  margin-left: -24px;
+  margin-right: -24px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: -90px;
+    margin-right: -90px;
+  }
+}
+
+.modal__close {
+  @include button-size (
+    0,
+    $button-padding-01,
+    59px
+  );
+  width: 100%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+    height: 108px;
+
+    &.btn {
+      text-transform: none;
+    }
+  }
 }

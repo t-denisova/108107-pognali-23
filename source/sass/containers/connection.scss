@@ -1,0 +1,82 @@
+.connection {
+  padding-left: $padding-mobile-01;
+  padding-right: $padding-mobile-01;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding-left: $padding-tablet-03;
+    padding-right: $padding-tablet-03;
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: $padding-desktop-03;
+    padding-right: $padding-desktop-03;
+    padding-bottom: 100px;
+  }
+}
+
+.connection__heading {
+  @include home-page__heading-02;
+  margin-bottom: 19px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 59px;
+  }
+}
+
+.connection__text {
+  @include home-page__text-01();
+  margin-bottom: 29px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 60px;
+  }
+}
+
+.connection__link {
+  color: $basic-yellow;
+
+  &:hover {
+    color: $special-orange;
+  }
+
+  &:active {
+    color: rgba($special-orange, 0.3);
+  }
+
+  &:focus {
+    @include focus-outline;
+  }
+}
+
+.connection__form {
+  margin-bottom: 29px;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 70px;
+  }
+}
+
+.connection__contacts {
+  align-self: flex-start;
+
+  @media (min-width: $desktop-width) {
+    width: 862px;
+    align-self: center;
+  }
+}

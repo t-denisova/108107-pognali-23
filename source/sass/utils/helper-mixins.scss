@@ -5,3 +5,70 @@
   color: inherit;
   background-color: transparent;
 }
+
+@mixin button-theme(
+  $bg-color,
+  $border-color,
+  $font-color,
+  $font-weight,
+  $hover-bg-color,
+  $icon-color,
+) {
+  border-width: $button-border-width;
+  border-style: solid;
+  border-color: $border-color;
+  background-color: $bg-color;
+  color: $font-color;
+  font-weight: $font-weight;
+
+  &:hover {
+    background-color: $hover-bg-color;
+    border-color: $hover-bg-color;
+  }
+
+  &:focus {
+    border-color: $focus;
+    box-shadow: 0 0 0 $button-outline-width $focus;
+  }
+
+  &:active {
+    color: rgba($font-color, 0.3);
+  }
+
+  svg {
+    fill: $icon-color;
+  }
+}
+
+@mixin button-size(
+  $border-radius,
+  $padding,
+  $height,
+) {
+  border-radius: $border-radius;
+  padding: $padding;
+  min-height: $height;
+}
+
+@mixin focus-outline($type: "border") {
+  @if ($type == "border") {
+    outline: 4px solid $focus;
+  }
+
+  @if ($type == "outline") {
+    outline: 4px solid $focus;
+    outline-offset: 4px;
+  }
+
+  @if ($type == "invalid") {
+    outline: 4px solid $basic-red;
+    outline-offset: 4px;
+  }
+
+  @if ($type == "reset") {
+    box-shadow: none;
+    outline: 4px solid transparent;
+    outline-offset: 4px;
+    border-color: inherit;
+  }
+}

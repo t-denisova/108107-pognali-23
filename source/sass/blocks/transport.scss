@@ -1,5 +1,87 @@
 .transport {
   display: flex;
+  justify-content: center;
   list-style: none;
   padding: 0;
+  margin: 0;
+}
+
+.transport__button {
+  @include button-theme(
+    $basic-white,
+    $basic-white,
+    transparent,
+    $button-font-weight-02,
+    transparent,
+    #d9d9d9
+  );
+  @include button-size(
+    50%,
+    0,
+    $button-height-01
+  );
+  width: $button-height-01;
+
+  &:hover {
+    box-shadow: 0 2px 6px rgba(22, 28, 53, 0.17);
+
+    svg {
+      fill: #b2b2b2;
+    }
+
+
+    &.transport__button--active svg {
+      fill: $basic-blue-light;
+      opacity: 0.7;
+    }
+
+    .transport__tooltip {
+      display: block;
+    }
+  }
+
+  &:active {
+    background-color: $basic-lavander-30;
+
+    svg {
+      fill: $basic_blue_light;
+      opacity: 0.1;
+    }
+
+    &.transport__button--active svg {
+      fill: $basic-blue-light;
+      opacity: 0.3;
+    }
+  }
+}
+
+.transport__button--active svg {
+  fill: $basic-blue-light;
+}
+
+.transport__tooltip {
+  display: none;
+  position: absolute;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: normal;
+  text-transform: none;
+  bottom: -65px;
+  padding: 18px 25px;
+  background-color: $basic-blue;
+  color: $basic-white;
+  border-radius: 4px;
+}
+
+
+.transport__tooltip::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 8px solid $basic-blue;
+  bottom: 100%;
+  left: calc(50% - 6px);
 }
