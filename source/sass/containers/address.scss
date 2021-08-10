@@ -102,7 +102,7 @@
   }
 
   &:focus {
-    @include focus-outline(reset);
-    @include focus-outline(outline);
+    @include focus-outline("reset");
+    @include focus-outline("outline");
   }
 }

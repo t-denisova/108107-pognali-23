@@ -163,7 +163,7 @@
   }
 
   &:focus {
-    @include focus-outline(border);
+    @include focus-outline("border");
   }
 }
 
@@ -198,6 +198,6 @@
   font-style: normal;
 
   &:focus {
-    @include focus-outline(border);
+    @include focus-outline("border");
   }
 }

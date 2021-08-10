@@ -50,25 +50,42 @@
   min-height: $height;
 }
 
-@mixin focus-outline($type: "border") {
-  @if ($type == "border") {
-    outline: 4px solid $focus;
-  }
+$border: (
+  outline: 4px solid $focus,
+);
 
-  @if ($type == "outline") {
-    outline: 4px solid $focus;
-    outline-offset: 4px;
-  }
+$outline: (
+  outline: 4px solid $focus,
+  outline-offset: 4px,
+);
 
-  @if ($type == "invalid") {
-    outline: 4px solid $basic-red;
-    outline-offset: 4px;
-  }
+$invalid: (
+  outline: 4px solid $basic-red,
+  outline-offset: 4px,
+);
 
-  @if ($type == "reset") {
-    box-shadow: none;
-    outline: 4px solid transparent;
-    outline-offset: 4px;
-    border-color: inherit;
+$reset: (
+  box-shadow: none,
+  outline: 4px solid transparent,
+  outline-offset: 4px,
+  border-color: inherit,
+);
+
+$tokens: (
+  border: $border,
+  outline: $outline,
+  invalid: $invalid,
+  reset: $reset
+);
+
+@mixin properties($map) {
+  @each $name, $value in $map {
+    #{$name}: $value;
   }
+}
+
+@mixin focus-outline($name) {
+  $token: map-get($tokens, $name);
+
+  @include properties($token);
 }

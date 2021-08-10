@@ -67,7 +67,7 @@
   }
 
   &:focus {
-    @include focus-outline;
+    @include focus-outline("border");
   }
 }
 
