@@ -5,3 +5,87 @@
   color: inherit;
   background-color: transparent;
 }
+
+@mixin button-theme(
+  $bg-color,
+  $border-color,
+  $font-color,
+  $font-weight,
+  $hover-bg-color,
+  $icon-color,
+) {
+  border-width: $button-border-width;
+  border-style: solid;
+  border-color: $border-color;
+  background-color: $bg-color;
+  color: $font-color;
+  font-weight: $font-weight;
+
+  &:hover {
+    background-color: $hover-bg-color;
+    border-color: $hover-bg-color;
+  }
+
+  &:focus {
+    border-color: $focus;
+    box-shadow: 0 0 0 $button-outline-width $focus;
+  }
+
+  &:active {
+    color: rgba($font-color, 0.3);
+  }
+
+  svg {
+    fill: $icon-color;
+  }
+}
+
+@mixin button-size(
+  $border-radius,
+  $padding,
+  $height,
+) {
+  border-radius: $border-radius;
+  padding: $padding;
+  min-height: $height;
+}
+
+$border: (
+  outline: 4px solid $focus,
+);
+
+$outline: (
+  outline: 4px solid $focus,
+  outline-offset: 4px,
+);
+
+$invalid: (
+  outline: 4px solid $basic-red,
+  outline-offset: 4px,
+);
+
+$reset: (
+  box-shadow: none,
+  outline: 4px solid transparent,
+  outline-offset: 4px,
+  border-color: inherit,
+);
+
+$tokens: (
+  border: $border,
+  outline: $outline,
+  invalid: $invalid,
+  reset: $reset
+);
+
+@mixin properties($map) {
+  @each $name, $value in $map {
+    #{$name}: $value;
+  }
+}
+
+@mixin focus-outline($name) {
+  $token: map-get($tokens, $name);
+
+  @include properties($token);
+}

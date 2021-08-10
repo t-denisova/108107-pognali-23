@@ -13,17 +13,19 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
-    gap: 172px;
+    column-gap: 172px;
   }
 }
 
 .directions__inner {
   padding-left: $padding-mobile-02;
   padding-right: $padding-mobile-02;
+  margin-bottom: 60px;
 
   @media (min-width: $tablet-width) {
-    padding-left: $padding-tablet-02;
-    padding-right: $padding-tablet-02;
+    padding-left: $padding-tablet-03;
+    padding-right: $padding-tablet-03;
+    margin-bottom: 104px;
   }
 
   @media (min-width: $desktop-width) {
@@ -32,26 +34,25 @@
     margin-left: 0;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
+    margin-bottom: 98px;
   }
 }
 
 .directions__heading {
-  @include home-page__heading-02();
-  margin-bottom: 20px;
+  @include home-page__heading-02;
+  margin-bottom: 19px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 60px;
+    margin-bottom: 57px;
   }
 }
 
 .directions__text {
   @include home-page__text-01();
-  margin-bottom: 60px;
   max-width: 308px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 100px;
-    max-width: 50%;
+    max-width: 55%;
   }
 
   @media (min-width: $desktop-width) {
@@ -62,10 +63,11 @@
 .directions__country-cards {
   padding-left: $padding-mobile-01;
   padding-right: $padding-mobile-01;
+  margin-bottom: 27px;
 
   @media (min-width: $tablet-width) {
-    padding-left: $padding-tablet-02;
-    padding-right: $padding-tablet-02;
+    padding-left: $padding-tablet-03;
+    padding-right: $padding-tablet-03;
     margin-bottom: 46px;
   }
 
@@ -74,16 +76,17 @@
     padding-right: 0;
     grid-column: 1 / 2;
     grid-row: 1 / -1;
+    margin-bottom: 0;
   }
 }
 
-.directions__button {
+.directions__button-wrapper {
   padding-left: $padding-mobile-01;
   padding-right: $padding-mobile-01;
 
   @media (min-width: $tablet-width) {
-    padding-left: $padding-tablet-02;
-    padding-right: $padding-tablet-02;
+    padding-left: $padding-tablet-03;
+    padding-right: $padding-tablet-03;
   }
 
   @media (min-width: $desktop-width) {

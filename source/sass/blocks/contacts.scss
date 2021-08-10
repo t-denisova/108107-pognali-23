@@ -5,9 +5,19 @@
   .contacts__icon--compact {
     display: none;
   }
+
+  @media (min-width: $desktop-width) {
+    &.contacts--inverse {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
 }
 
 .contacts__link {
+  position: relative;
+  display: flex;
+  align-items: center;
   font-size: 16px;
   line-height: 18px;
   font-weight: 700;
@@ -19,16 +29,104 @@
     font-size: 28px;
     line-height: 28px;
   }
-}
 
-.contacts--inverse {
-  .contacts__link {
-    color: $basic-yellow;
+  &:focus {
+    @include focus-outline("border");
   }
 }
 
+.contacts__link--full {
+  .contacts__icon-wrapper {
+    background-color: $basic-blue;
+    width: 45px;
+    height: 45px;
+
+    @media (min-width: $tablet-width) {
+      width: 68px;
+      height: 68px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 90px;
+      height: 90px;
+    }
+  }
+
+  &:hover {
+    .contacts__text {
+      color: $special-yellow-dark;
+    }
+
+    svg {
+      fill: $special-yellow-dark;
+    }
+  }
+
+  &:active {
+    .contacts__text {
+      color: rgba($basic-yellow, 0.3);
+    }
+
+    svg {
+      fill: rgba($special-yellow-dark, 0.3);
+    }
+  }
+}
+
+.contacts__link--compact .contacts__icon-wrapper {
+  width: 40px;
+  height: 40px;
+
+  @media (min-width: $desktop-width) {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+
+.contacts__link--compact:first-child {
+  .contacts__icon-wrapper {
+    background-color: $special_orange;
+  }
+
+  &:hover .contacts__icon-wrapper {
+    background-color: #f26926;
+  }
+
+  &:active .contacts__icon-wrapper {
+    background-color: #f26926;
+
+    svg {
+      opacity: 0.3;
+    }
+  }
+}
+
+.contacts__link--compact:last-child {
+  .contacts__icon-wrapper {
+    background-color: $special_yellow_dark;
+  }
+
+  &:hover .contacts__icon-wrapper {
+    background-color: $special-orange;
+  }
+
+  &:active .contacts__icon-wrapper {
+    background-color: $special-orange;
+
+    svg {
+      opacity: 0.3;
+    }
+  }
+}
+
+.contacts--inverse .contacts__link {
+  color: $basic-yellow;
+}
+
 .contacts--compact {
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: row;
 
   .contacts__icon--compact {
     display: block;
@@ -48,6 +146,27 @@
   }
 
   @media (min-width: $desktop-width) {
-    display: inline-block;
+    display: inline-flex;
+    flex-direction: row;
   }
+}
+
+
+.contacts__icon-wrapper {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.contacts__icon--full {
+  fill: $basic-yellow;
+}
+
+.contacts__icon--compact {
+  fill: $basic-blue;
+}
+
+.contacts__text {
+  margin-left: 16px;
 }

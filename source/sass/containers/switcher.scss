@@ -1,0 +1,61 @@
+.switcher {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  top: 73px;
+  width: 100%;
+  background-color: $basic-white;
+  padding: $padding-mobile-01;
+
+  @media (min-width: $tablet-width) {
+    top: 90px;
+    padding: 97px;
+  }
+}
+
+.switcher--opened {
+  display: block;
+}
+
+.switcher__menu {
+  margin-top: 45px;
+  margin-bottom: 51px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 25px;
+    margin-bottom: 144px;
+  }
+}
+
+.switcher__auth {
+  @include button-size(
+    $button-radius-03,
+    $button-padding-02,
+    $button-height-02
+  );
+  width: 100%;
+  margin-bottom: 51px;
+
+  @media (min-width: $tablet-width) {
+    &.btn {
+      display: none;
+    }
+  }
+}
+
+.switcher__contacts {
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 120px;
+  }
+}
+
+.switcher__socials {
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-start;
+    margin-bottom: 90px;
+  }
+}

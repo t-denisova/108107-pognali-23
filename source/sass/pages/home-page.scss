@@ -49,6 +49,7 @@
   line-height: 22px;
   font-weight: 300;
   font-style: normal;
+  margin: 0;
 
   @media (min-width: $tablet-width) {
     font-size: 28px;
@@ -61,6 +62,7 @@
   line-height: 22px;
   font-weight: 700;
   font-style: normal;
+  margin: 0;
 
   @media (min-width: $tablet-width) {
     font-size: 21px;
@@ -100,7 +102,7 @@
 .home-page__fold--02 {
   @include home-page__fold(30px);
   z-index: 7;
-  background-color: $bg-blue;
+  background-color: $basic-navy;
   color: $basic-white;
 
   @media (min-width: $tablet-width) {
@@ -121,11 +123,15 @@
 .home-page__fold--04 {
   @include home-page__fold(80px);
   z-index: 5;
-  background-color: $bg-blue;
+  background-color: $basic-navy;
   color: $basic-white;
 
   @media (min-width: $tablet-width) {
-    @include home-page__fold(134px);
+    @include home-page__fold(147px);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include home-page__fold(231px);
   }
 }
 
@@ -137,16 +143,24 @@
   @media (min-width: $tablet-width) {
     @include home-page__fold(134px);
   }
+
+  @media (min-width: $desktop-width) {
+    @include home-page__fold(231px);
+  }
 }
 
 .home-page__fold--06 {
   @include home-page__fold(80px);
   z-index: 3;
-  background-color: $basic-blue;
+  background-color: $basic-navy;
   color: $basic-white;
 
   @media (min-width: $tablet-width) {
     @include home-page__fold(130px);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include home-page__fold(208px);
   }
 }
 
@@ -156,6 +170,35 @@
   background-color: $basic-yellow;
 
   @media (min-width: $tablet-width) {
-    @include home-page__fold(108px);
+    @include home-page__fold(102px);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include home-page__fold(116px);
+  }
+}
+
+.home-page__button--primary {
+  @include button-size (
+    $button-radius-01,
+    $button-padding-03,
+    $button-height-03
+  );
+  width: 100%;
+  font-size: 18px;
+  line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    @include button-size (
+      $button-radius-02,
+      $button-padding-04,
+      $button-height-04
+    );
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
   }
 }

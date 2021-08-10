@@ -1,53 +1,53 @@
-//--------------
-// Global
-//--------------
-@import "./utils/normalize.css";
+//  Utils
 @import "./utils/colors.scss";
-@import "./utils/font-face.scss";
 @import "./utils/variables.scss";
 @import "./utils/helper-classes.scss";
 @import "./utils/helper-mixins.scss";
-@import "./utils/body.scss";
 
-//--------------
+// Base
+@import "./base/body.scss";
+@import "./base/font-face.scss";
+@import "./base/normalize.css";
+
+// Pages
+@import "./pages/home-page.scss";
+@import "./pages/inner-page.scss";
+@import "./pages/form-page.scss";
+@import "./pages/catalog-page.scss";
+
 // Containers
-//--------------
-@import "./blocks/home-page.scss";
-@import "./blocks/inner-page.scss";
-@import "./blocks/form-page.scss";
-@import "./blocks/catalog-page.scss";
-@import "./blocks/hero.scss";
-@import "./blocks/about.scss";
-@import "./blocks/direction.scss";
-@import "./blocks/companions.scss";
-@import "./blocks/tariffs.scss";
-@import "./blocks/connection.scss";
-@import "./blocks/address.scss";
-@import "./blocks/plans.scss";
-@import "./blocks/profile.scss";
-@import "./blocks/filter-country.scss";
+@import "./containers/about.scss";
+@import "./containers/address.scss";
+@import "./containers/companions.scss";
+@import "./containers/connection.scss";
+@import "./containers/direction.scss";
+@import "./containers/footer.scss";
+@import "./containers/header.scss";
+@import "./containers/hero.scss";
+@import "./containers/plans.scss";
+@import "./containers/profile.scss";
+@import "./containers/switcher.scss";
+@import "./containers/tariffs.scss";
 
-//--------------
-// Components
-//--------------
+// Blocks
 @import "./blocks/accordion.scss";
 @import "./blocks/actions.scss";
-@import "./blocks/buttons.scss";
 @import "./blocks/choose-country.scss";
 @import "./blocks/contacts.scss";
 @import "./blocks/country-cards.scss";
-@import "./blocks/footer.scss";
 @import "./blocks/fieldset.scss";
-@import "./blocks/header.scss";
+@import "./blocks/form.scss";
+@import "./blocks/logo.scss";
 @import "./blocks/map.scss";
 @import "./blocks/modal.scss";
 @import "./blocks/menu.scss";
 @import "./blocks/offers.scss";
+@import "./blocks/steps.scss";
 @import "./blocks/skiplink.scss";
 @import "./blocks/socials.scss";
-@import "./blocks/steps.scss";
-@import "./blocks/switcher.scss";
 @import "./blocks/progress.scss";
+@import "./blocks/text-input.scss";
 @import "./blocks/traveler.scss";
 @import "./blocks/transport.scss";
 @import "./blocks/quote.scss";
+@import "./blocks/button.scss";

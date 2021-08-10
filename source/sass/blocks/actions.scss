@@ -8,7 +8,7 @@
   display: none;
 
   @media (min-width: $tablet-width) {
-    display: block;
+    display: inline-flex;
   }
 
   @media (min-width: $desktop-width) {

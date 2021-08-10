@@ -3,38 +3,132 @@
 }
 
 .country-cards::before {
-  content: "";
-  position: absolute;
-  left: -35px;
-  top: -35px;
-  width: 141px;
-  height: 141px;
-  background-color: $basic-lavander-50;
-  border-radius: 20px;
+  @media (min-width: $tablet-width) {
+    content: "";
+    position: absolute;
+    left: 40px;
+    top: -35px;
+    width: 141px;
+    height: 141px;
+    background-color: $basic-lavander-50;
+    border-radius: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 60px;
+    top: -75px;
+  }
 }
 
 .country-cards__item {
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .country-cards__item + .country-cards__item {
   margin-top: 10px;
 }
 
+.country-cards__item:last-child::after {
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 81px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to top, $basic-lavander-10, transparent);
+  }
+}
+
+.country-cards__image {
+  width: 100%;
+  height: auto;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    width: 186px;
+    z-index: 1;
+    top: 0;
+    right: 0;
+  }
+}
+
 .country-cards__inner {
+  position: relative;
   background-color: $basic-white;
   border-radius: 10px;
   padding: 24px;
+  margin-top: -10px;
+
+  @media (min-width: $tablet-width) {
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 24px 30px;
+  }
+}
+
+.country-cards__flag {
+  position: absolute;
+  top: -10px;
+
+  @media (min-width: $tablet-width) {
+    top: 20px;
+    right: 150px;
+    z-index: 2;
+  }
 }
 
 .country-cards__header {
   @include home-page__heading-03();
-  color: $basic-blue;
+  margin-bottom: 2px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 5px;
+  }
 }
 
 .country-cards__desc,
 .country-cards__users-num {
-  @include home-page__text-02();
+  font-size: 16px;
+  line-height: 18px;
+  margin: 0;
   color: $special-grey;
+  opacity: 0.3;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 500;
+  }
+}
+
+.country-cards__desc {
+  @media (min-width: $tablet-width) {
+    margin: 0 0 20px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 26px 0;
+  }
+}
+
+.country-cards__users-num {
+  position: absolute;
+  top: 28px;
+  right: 24px;
+
+  @media (min-width: $tablet-width) {
+    position: static;
+  }
+}
+
+.country-cards__users-num svg {
+  fill: $special-grey;
   opacity: 0.3;
 }

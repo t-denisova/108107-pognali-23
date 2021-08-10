@@ -1,0 +1,102 @@
+.header {
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 73px;
+  background-color: transparent;
+  color: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    height: 132px;
+  }
+}
+
+.header--inverse {
+  background-color: $basic-white;
+  color: $basic-blue;
+  height: 90px;
+}
+
+.header__wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: $padding-mobile-01;
+  padding-right: $padding-mobile-01;
+
+  @media (min-width: $tablet-width) {
+    padding-left: $padding-tablet-01;
+    padding-right: $padding-tablet-01;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: flex-start;
+    padding-left: $padding-desktop-01;
+    padding-right: $padding-desktop-01;
+  }
+}
+
+.header--opened {
+  background-color: $basic-white;
+  color: $basic-blue;
+
+  .header__action--icon-close {
+    display: block;
+  }
+
+  .header__action--icon-burger {
+    display: none;
+  }
+}
+
+.header__action {
+  @include button-theme(
+    transparent,
+    transparent,
+    $basic-white,
+    $button-font-weight-02,
+    transparent,
+    $basic-white
+  );
+  @include button-size (
+    0,
+    $button-padding-01,
+    $button-height-01
+  );
+
+  @media (min-width: $desktop-width) {
+    &.btn {
+      display: none;
+    }
+  }
+}
+
+.header__action--inverse {
+  @include button-theme(
+    transparent,
+    transparent,
+    transparent,
+    $button-font-weight-02,
+    transparent,
+    #cccccc
+  );
+}
+
+.header__action--icon-close {
+  display: none;
+}
+
+.header__auth {
+  @include button-size(
+    $button-radius-03,
+    $button-padding-02,
+    $button-height-02
+  );
+  font-size: 20px;
+  line-height: 20px;
+}
