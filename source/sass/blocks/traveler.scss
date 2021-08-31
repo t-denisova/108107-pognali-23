@@ -20,7 +20,43 @@
   display: none;
 
   @media (min-width: $desktop-width) {
-    display: block;
+    display: flex;
+    align-items: center;
+    padding-right: 40px;
+
+    .traveler__photo {
+      width: 190px;
+      height: 190px;
+    }
+
+    .traveler__score {
+      width: 95px;
+      height: 95px;
+      position: static;
+      background-color: transparent;
+      margin-right: 44px;
+      color: $basic-white;
+    }
+
+    .traveler__image-container {
+      position: relative;
+    }
+
+    .traveler__change-photo {
+      @include button-size(
+        0 0 10px 10px,
+        13px 60px 10px,
+        47px
+      );
+
+      position: absolute;
+      bottom: -47px;
+      width: 100%;
+      left: 0;
+      font-size: 20px;
+      line-height: 18px;
+      font-weight: 500;
+    }
   }
 }
 
@@ -32,26 +68,102 @@
   .traveler__score {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    position: static;
+    background-color: transparent;
+    width: 100px;
+    height: 100px;
+    font-size: 38px;
+    line-height: 38px;
+    padding: 16px;
+  }
+
+  .traveler__score-level {
+    font-size: 18px;
+    line-height: 18px;
+    padding-top: 6px;
+    border-top: 1px solid rgba($special-grey, 0.3);
   }
 
   .traveler__photo {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
+    width: 100px;
+    height: 100px;
+    justify-self: end;
   }
 
   .traveler__change-photo {
+    @include button-size(
+      $button-radius-03,
+      12px 40px 8px,
+      $button-height-01,
+    );
     grid-column: 1 / -1;
     grid-row: 2 / 3;
+    font-size: 20px;
+    line-height: 18px;
+    margin-top: 18px;
   }
 
   .traveler__form {
     grid-column: 1 / -1;
     grid-row: 3 / 4;
+    margin-top: 33px;
   }
 
-  .travaler__transport {
+  .traveler__textarea {
+    position: relative;
+    border: 1px solid $basic-grey-01;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+
+    &:focus-within {
+      border-color: $basic-blue;
+    }
+  }
+
+  .traveler__textarea-label {
+    text-transform: uppercase;
+    color: $basic-blue-light;
+    margin: 0;
+    position: absolute;
+    top: -16px;
+    padding: 5px 14px;
+    background-color: $basic-lavander-10;
+    font-weight: 700;
+  }
+
+  .traveler__textarea-wrapper {
+    width: 100%;
+    height: 90px;
+  }
+
+  .traveler__textarea-input {
+    background-color: transparent;
+    font-family: $font-family;
+    border: none;
+    font-size: 16px;
+    line-height: 18px;
+    color: rgba($special-grey, 0.6);
+    padding: 25px;
+    width: 100%;
+    height: 100%;
+    resize: none;
+
+    &:focus {
+      @include focus-outline("outline");
+    }
+  }
+
+  .traveler__transport {
     grid-column: 1 / -1;
     grid-row: 4 / 5;
+    margin-top: 24px;
+  }
+
+  &:hover {
+    box-shadow: none;
   }
 
   @media (min-width: $tablet-width) {
@@ -61,48 +173,443 @@
     .traveler__score {
       grid-column: 1 / 2;
       grid-row: 1 / 2;
+      width: 96px;
+      height: 96px;
     }
 
-    .travaler__transport {
+    .traveler__transport {
       grid-column: 2 / 3;
       grid-row: 1 / 2;
+      margin-top: 0;
     }
 
     .traveler__photo {
       grid-column: 3 / 4;
       grid-row: 1 / 2;
+      width: 96px;
+      height: 96px;
     }
 
     .traveler__change-photo {
       grid-column: 1 / -1;
       grid-row: 2 / 3;
+
+      @include button-size(
+        $button-radius-01,
+        22px 40px 20px,
+        $button-height-03,
+      );
+
+      font-size: 24px;
+      line-height: 24px;
+      margin-top: 55px;
     }
 
     .traveler__form {
       grid-column: 1 / -1;
       grid-row: 3 / 4;
+      margin-top: 52px;
+    }
+
+    .traveler__textarea-label {
+      top: auto;
+      bottom: -16px;
+      font-size: 20px;
+      line-height: 20px;
+      font-weight: 500;
+    }
+
+    .traveler__textarea-wrapper {
+      height: 95px;
+    }
+
+    .traveler__textarea-input {
+      font-size: 20px;
+      line-height: 22px;
+      padding: 36px 40px;
     }
   }
 
-
   @media (min-width: $desktop-width) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 730px auto;
     grid-template-rows: auto;
+    column-gap: 140px;
 
     .traveler__form {
       grid-column: 1 / 2;
       grid-row: 1 / 2;
+      margin-top: 0;
     }
 
-    .travaler__transport {
+    .traveler__transport {
       grid-column: 2 / 3;
       grid-row: 1 / 2;
+      width: 384px;
     }
 
     .traveler__score,
     .traveler__photo,
     .traveler__change-photo {
       display: none;
+    }
+
+    .traveler__textarea-label {
+      left: 25px;
+    }
+  }
+}
+
+.traveler--action {
+  padding: 15px 20px 23px;
+  grid-template-columns: 70px repeat(2, auto);
+  grid-template-rows: 50px repeat(7, auto);
+  text-align: left;
+  overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    padding: 35px 35px 26px;
+    grid-template-columns: 190px 150px 50px auto 1fr;
+    grid-template-rows: repeat(4, auto);
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 46px 43px 48px 0;
+    grid-template-columns: 285px 150px 50px auto 215px 60px;
+    grid-template-rows: repeat(3, auto);
+  }
+
+  .traveler__photo {
+    width: 70px;
+    height: 70px;
+    position: relative;
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+
+    @media (min-width: $desktop-width) {
+      grid-row: 1 / -1;
+    }
+  }
+
+  .traveler__favorite {
+    position: absolute;
+    top: 54px;
+    left: 68px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+    @include button-theme(
+      #E2E5F2,
+      #E2E5F2,
+      $basic-blue-light,
+      $button-font-weight-02,
+      #E2E5F2,
+      rgba(#192144, 0.5)
+    );
+
+    @media (min-width: $tablet-width) {
+      position: static;
+      grid-column: 3 / 4;
+      grid-row: 3 / 4;
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .traveler__favorite--active {
+    @include button-theme(
+      #F9EAEA,
+      #F9EAEA,
+      $basic-blue-light,
+      $button-font-weight-02,
+      #F9D8D8,
+      #F02323
+    );
+  }
+
+  .traveler__likes {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    padding-left: 16px;
+    color: $basic-blue;
+    margin: 0;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+
+    @media (min-width: $tablet-width) {
+      grid-column: 4 / 5;
+      grid-row: 3 / 4;
+      font-size: 20px;
+      line-height: 20px;
+      align-self: center;
+      padding-left: 5px;
+    }
+  }
+
+  .traveler__header {
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+
+    @media (min-width: $tablet-width) {
+      justify-content: flex-end;
+      grid-column: 2 / 5;
+      grid-row: 1 / 2;
+      padding-left: 0;
+    }
+  }
+
+  .traveler__heading {
+    font-size: 20px;
+    line-height: 20px;
+    padding-left: 16px;
+    margin: 0;
+    width: 78px;
+
+    @media (min-width: $tablet-width) {
+      width: auto;
+      padding-left: 0;
+      font-size: 30px;
+      line-height: 30px;
+    }
+  }
+
+  .traveler__status {
+    margin: 5px 0;
+
+    @media (min-width: $tablet-width) {
+      margin-left: 22px;
+      margin-top: 12px;
+    }
+
+    @media (min-width: $desktop-width) {
+      position: absolute;
+      margin-top: 10px;
+      left: -45px;
+    }
+  }
+
+  .traveler__tags {
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+    margin-top: 14px;
+    margin-bottom: 18px;
+
+    @media (min-width: $tablet-width) {
+      grid-column: 2 / 5;
+      grid-row: 2 / 3;
+      margin-top: 19px;
+      margin-bottom: 46px;
+      max-width: 226px;
+      font-size: 20px;
+      line-height: 23px;
+    }
+  }
+
+  .traveler__countries-wrapper {
+    grid-column: 1 / -1;
+    grid-row: 4 / 5;
+    margin-bottom: 18px;
+
+    @media (min-width: $tablet-width) {
+      grid-column: 1 / -1;
+      grid-row: -1 / -2;
+      margin-bottom: 0;
+      margin-top: 22px;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-column: 5 / -1;
+      grid-row: 1 / 3;
+      margin-top: 0;
+    }
+  }
+
+  .traveler__divider {
+    position: relative;
+    margin: 0;
+    font-size: 15px;
+    line-height: 16px;
+    font-weight: 400;
+    z-index: 2;
+    margin-left: -8px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 999px;
+      height: 1px;
+      top: 6px;
+      left: -20px;
+      background-color: #edeff6;
+      z-index: 1;
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-left: 71px;
+
+      &::after {
+        left: -200px;
+      }
+    }
+  }
+
+  .traveler__divider--01 {
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+
+  .traveler__divider--02,
+  .traveler__divider--03 {
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  .traveler__divider-text {
+    position: relative;
+    padding: 0 8px;
+    background-color: $basic-white;
+    z-index: 2;
+  }
+
+  .traveler__countries {
+    margin-bottom: 0;
+    margin-top: 18px;
+    flex-direction: column;
+
+    @media (min-width: $tablet-width) {
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+
+    @media (min-width: $desktop-width) {
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-top: 0;
+    }
+  }
+
+  .traveler__country + .traveler__country {
+    margin-left: 0;
+  }
+
+  .traveler__country-item {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    line-height: 16px;
+    color: $basic-blue-light;
+    text-transform: uppercase;
+    font-weight: 500;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
+  .traveler__country-item > * + * {
+    margin-left: 14px;
+
+    @media (min-width: $tablet-width) {
+      margin-left: 10px;
+    }
+  }
+
+  .traveler__country-item + .traveler__country-item {
+    margin-top: 10px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 0;
+      margin-left: 25px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: 0;
+      margin-top: 14px;
+    }
+  }
+
+  .traveler__transport-wrapper {
+    grid-column: 1 / 3;
+    grid-row: 5 / 6;
+
+    @media (min-width: $tablet-width) {
+      grid-column: -1 / -2;
+      grid-row: 1 / 3;
+      justify-self: end;
+      margin-right: 8px;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-column: 5 / 6;
+      grid-row: -1 / -2;
+      margin-right: 0;
+      margin-left: -8px;
+      align-self: center;
+      justify-self: start;
+    }
+  }
+
+  .traveler__transport {
+    margin-top: 16px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 0;
+    }
+  }
+
+  .traveler__score-wrapper {
+    grid-column: 3 / 4;
+    grid-row: 5 / 6;
+    justify-self: flex-end;
+
+    @media (min-width: $tablet-width) {
+      grid-column: -1 / -2;
+      grid-row: 3 / 4;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-column: -1 / -2;
+      grid-row: -1 / -2;
+      margin-right: 0;
+    }
+  }
+
+  .traveler__score {
+    position: static;
+    background-color: transparent;
+    width: 45px;
+    height: 45px;
+    color: $basic-blue;
+    margin-top: 10px;
+  }
+
+  .traveler__action {
+    @include button-size (
+      $button-radius-03,
+      12px 8px 8px,
+      $button-height-01
+    );
+    font-size: 17px;
+    line-height: 17px;
+    grid-column: 1 / -1;
+    grid-row: 6 / 7;
+    margin-top: 14px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 20px;
+      grid-column: 2 / 3;
+      grid-row: 3 / 4;
+      padding: 18px 33px 17px;
+      margin-top: 0;
+      height: 50px;
     }
   }
 }
@@ -159,7 +666,31 @@
   align-items: center;
 
   &:hover {
-    opacity: 0.7;
+    .traveler__heading {
+      color: rgba($basic_blue_light, 0.6);
+    }
+
+    .traveler__status--active {
+      background-color: rgba($basic-green, 0.6);
+    }
+
+    .traveler__status--inactive {
+      background-color: rgba($basic-red, 0.6);
+    }
+  }
+
+  &:active {
+    .traveler__heading {
+      color: rgba($basic_blue_light, 0.3);
+    }
+
+    .traveler__status--active {
+      background-color: rgba($basic-green, 0.3);
+    }
+
+    .traveler__status--inactive {
+      background-color: rgba($basic-red, 0.3);
+    }
   }
 
   &:focus {
@@ -174,7 +705,6 @@
   height: 6px;
   border-radius: 50%;
   margin-right: 10px;
-  margin-left: -16px;
 }
 
 .traveler__status--active {

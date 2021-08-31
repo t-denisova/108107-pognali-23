@@ -3,13 +3,46 @@
   padding-right: $padding-mobile-01;
 
   @media (min-width: $tablet-width) {
-    padding-left: $padding-tablet-02;
-    padding-right: $padding-tablet-02;
+    padding-left: $padding-tablet-03;
+    padding-right: $padding-tablet-03;
   }
 
   @media (min-width: $desktop-width) {
     padding-left: $padding-desktop-02;
     padding-right: $padding-desktop-01;
+  }
+}
+
+.plans__heading {
+  font-size: 16px;
+  line-height: 16px;
+  color: $basic-blue-light;
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 34px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: block;
+
+    span {
+      margin-right: 36px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    align-self: center;
+    padding: 0;
   }
 }
 
@@ -20,9 +53,20 @@
 
 .plans__item {
   list-style: none;
-  padding: 24px;
   background-color: $basic-white;
   border-radius: 10px;
+  padding: 24px 24px 16px;
+
+  @media (min-width: $tablet-width) {
+    padding: 40px 0 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: auto 600px;
+    align-items: center;
+    padding: 32px 40px 25px;
+  }
 }
 
 .plans__item::marker {
@@ -31,13 +75,85 @@
 
 .plans__item + .plans__item {
   margin-top: 10px;
+
+  @media (min-width: $desktop-width) {
+    margin-top: 15px;
+  }
+}
+
+.plans__inner {
+  @media (min-width: $tablet-width) {
+    padding: 20px 40px 8px;
+    border-top: 1px solid rgba($basic-grey-01, 0.3);
+    display: flex;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    border-top: 0;
+  }
 }
 
 .plans__info {
   font-weight: 500;
   font-size: 14px;
   line-height: 14px;
-
-  color: $basic-blue;
+  color: $basic-blue-light;
   text-transform: uppercase;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.plans__info + .plans__info {
+  margin-top: 5px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+    margin-left: 38px;
+  }
+}
+
+.plans__button {
+  @include button-theme(
+    transparent,
+    transparent,
+    rgba(#000, 0.3),
+    $button-font-weight-01,
+    transparent,
+    rgba(#000, 0.3)
+  );
+
+  &:hover {
+    color: rgba(#000000, 0.6);
+  }
+
+  &:active {
+    color: rgba(#000000, 0.1);
+  }
+
+  @include button-size (
+    0,
+    12px 8px 8px,
+    $button-height-01
+  );
+
+  margin-top: 16px;
+  margin-left: -8px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 0;
+    margin-right: -8px;
+    margin-left: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: -6px;
+  }
 }

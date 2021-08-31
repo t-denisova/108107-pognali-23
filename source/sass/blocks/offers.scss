@@ -4,6 +4,10 @@
 }
 
 .offers--compact {
+  @media (min-width: $tablet-width) {
+    border-bottom: 1px solid #e1e3e9;
+  }
+
   .offers__item {
     display: block;
     margin-bottom: 0;
@@ -12,7 +16,6 @@
       display: flex;
       justify-content: space-between;
       padding: 22px 0;
-      border-bottom: 1px solid #e1e3e9;
       border-top: 1px solid #e1e3e9;
     }
   }

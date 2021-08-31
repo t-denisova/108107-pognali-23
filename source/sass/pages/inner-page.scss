@@ -21,20 +21,21 @@
   height: 143px;
 
   @media (min-width: $tablet-width) {
-    padding-left: $padding-tablet-02;
-    padding-right: $padding-tablet-02;
+    padding-left: $padding-tablet-03;
+    padding-right: $padding-tablet-03;
     height: 350px;
   }
 
   @media (min-width: $desktop-width) {
     padding-left: $padding-desktop-02;
-    padding-right: $padding-desktop-01;
+    padding-right: $padding-desktop-02;
   }
 }
 
 .inner-page__header-inner {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
 }
 
 @mixin inner-page__heading-01 {
@@ -65,13 +66,24 @@
 
 .inner-page__heading-01 {
   @include inner-page__heading-01();
+  position: relative;
   color: $basic-white;
   margin-top: auto;
-  margin-bottom: 12px;
+  padding-bottom: 12px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 66px;
+    padding-bottom: 66px;
   }
+}
+
+.inner-page__heading-01::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  border-radius: 4px;
+  background-color: $special-orange;
+  bottom: -2px;
 }
 
 .inner-page__heading-02 {
@@ -79,4 +91,33 @@
   color: $basic-blue;
   margin: 0;
   padding: 28px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 57px 0;
+  }
+}
+
+.inner-page__header-back {
+  &.btn {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include button-theme(
+      transparent,
+      transparent,
+      $basic-white,
+      $button-font-weight-02,
+      transparent,
+      $basic-white
+    );
+    font-size: 20px;
+    line-height: 20px;
+
+    &.btn {
+      display: inline-block;
+    }
+
+    margin-top: 25px;
+  }
 }

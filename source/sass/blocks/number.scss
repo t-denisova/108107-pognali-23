@@ -1,0 +1,119 @@
+.number {
+  position: relative;
+  width: 100%;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 180px 39px;
+    gap: 35px;
+    align-items: center;
+    grid-template-rows: auto;
+  }
+}
+
+.number__label {
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    margin-bottom: 0;
+  }
+}
+
+.number span {
+  opacity: 0.3;
+  margin-left: auto;
+
+  @media (min-width: $desktop-width) {
+    opacity: 1;
+  }
+}
+
+.number__input-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  border: 1px solid $basic-grey-01;
+  border-radius: 4px;
+
+  &:hover {
+    border-color: $basic-grey-02;
+  }
+
+  &:active {
+    border-color: $basic-blue;
+  }
+
+  &:focus-within {
+    border-color: $basic-blue;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+}
+
+.number__input {
+  width: 100%;
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: $basic-blue-light;
+  height: 43px;
+  border: none;
+  text-align: center;
+
+  &:focus {
+    @include focus-outline("border");
+  }
+
+  @media (min-width: $tablet-width) {
+    height: 70px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  margin: 0;
+}
+
+.number__control-button {
+  @include button-theme(
+    transparent,
+    transparent,
+    transparent,
+    $button-font-weight-02,
+    transparent,
+    #cccccc
+  );
+
+  svg path {
+    stroke: #cccccc;
+  }
+
+  &:active {
+    svg path {
+      stroke: $basic-blue;
+    }
+  }
+
+  &:hover {
+    svg,
+    path {
+      stroke: #999999;
+    }
+  }
+
+  width: 40px;
+  height: 40px;
+
+  @media (min-width: $tablet-width) {
+    width: 70px;
+    height: 70px;
+  }
+}

@@ -7,10 +7,39 @@
 }
 
 .progress--compact {
-  display: block;
-  transform: rotate(90deg);
+  display: flex;
+  justify-content: space-between;
+  width: 47px;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 76px;
+  }
 
   @media (min-width: $desktop-width) {
     display: none;
   }
+}
+
+.progress__step {
+  text-transform: uppercase;
+  color: rgba(#000000, 0.6);
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.progress__step span {
+  @media (min-width: $desktop-width) {
+    margin-left: 30px;
+  }
+}
+
+.progress__step + .progress__step {
+  @media (min-width: $desktop-width) {
+    margin-top: 27px;
+  }
+}
+
+.progress__step--active {
+  color: #000000;
 }

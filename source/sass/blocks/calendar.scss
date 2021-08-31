@@ -1,0 +1,205 @@
+.calendar__month {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 44px;
+  width: 100%;
+  margin-bottom: 22px;
+  border-top: 1px solid #d6d9e6;
+  border-bottom: 1px solid #d6d9e6;
+
+  @media (min-width: $tablet-width) {
+    height: 86px;
+    margin-bottom: 40px;
+  }
+}
+
+.calendar__heading {
+  color: $basic-blue-light;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.calendar__month-button {
+  @include button-theme(
+    transparent,
+    transparent,
+    transparent,
+    $button-font-weight-02,
+    transparent,
+    rgba(#000000, 0.3)
+  );
+
+  path {
+    fill: rgba(#000000, 0.3);
+  }
+
+  &:active {
+    fill: rgba(#000000, 0.1);
+
+    path {
+      fill: rgba(#000000, 0.1);
+    }
+  }
+
+  &:hover {
+    fill: rgba(#000000, 0.5);
+
+    path {
+      fill: rgba(#000000, 0.5);
+    }
+  }
+
+  width: 40px;
+  height: 40px;
+
+  @media (min-width: $tablet-width) {
+    width: 86px;
+    height: 86px;
+  }
+}
+
+.calendar__weekdays,
+.calendar__days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  max-width: 1000px;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  margin-top: 0;
+}
+
+.calendar__weekdays {
+  margin-bottom: 11px;
+  height: 15px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 9px;
+    height: 18px;
+  }
+}
+
+.calendar__weekday {
+  text-align: center;
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    padding-left: 15px;
+  }
+}
+
+.calendar__weekday:nth-last-of-type(2),
+.calendar__weekday:last-of-type {
+  color: #ff5c23;
+}
+
+.calendar__weekdays--full {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+  }
+}
+
+.calendar__weekdays--compact {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.calendar__days {
+  background-color: #d6d9e6;
+  padding: 1px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.calendar__day {
+  position: relative;
+  background-color: #edeff6;
+  color: $basic-blue-light;
+}
+
+.calendar__day--prev {
+  background-color: $basic-white;
+  color: rgba($special-grey, 0.3);
+}
+
+.calendar__day--selected {
+  background-color: #1d2e5b;
+  color: $basic-white;
+}
+
+.calendar__day-button-month {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: inline-block;
+  }
+}
+
+.calendar__day-button-selected-text {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    display: block;
+    bottom: 12px;
+    left: 15px;
+  }
+}
+
+.calendar__day--active {
+  outline: 2px solid #ff5c23;
+  outline-offset: -1px;
+
+  @media (min-width: $tablet-width) {
+    outline-width: 4px;
+    outline-offset: -3px;
+  }
+}
+
+.calendar__day-button {
+  border: none;
+  height: 32px;
+  width: 100%;
+  color: inherit;
+  background-color: inherit;
+  font-family: $font-family;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+
+  &:focus {
+    @include focus-outline("outline-inner");
+  }
+
+  @media (min-width: $tablet-width) {
+    height: 71px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+.calendar__day-button-inner {
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 13px;
+    left: 15px;
+  }
+}

@@ -43,6 +43,11 @@
   text-decoration: none;
   color: inherit;
   padding: 12px 12px 8px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  display: flex;
 
   &:hover {
     color: $basic-yellow;
@@ -54,6 +59,16 @@
 
   &:focus {
     @include focus-outline("border");
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 71px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 20px;
   }
 }
 
@@ -87,25 +102,20 @@
   }
 
   .menu__list {
+    font-family: $font-family;
     display: block;
     font-size: 30px;
     line-height: 35px;
     font-weight: 500;
     color: $basic-blue;
-
-    @media (min-width: $tablet-width) {
-      font-size: 60px;
-      line-height: 71px;
-    }
-
-    @media (min-width: $desktop-width) {
-      font-size: 20px;
-      line-height: 20px;
-    }
   }
 
   .menu__link {
     color: $basic-blue;
     padding: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
   }
 }

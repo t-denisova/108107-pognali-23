@@ -1,3 +1,42 @@
+.accordion {
+  border-top: 1px solid #f3c72b;
+
+  @media (min-width: $tablet-width) {
+    border-bottom: 1px solid #f3c720;
+    padding: 22px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    border: none;
+    padding: 0;
+  }
+}
+
+.accordion__item {
+  padding: 12px 0 14px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 12px;
+    align-items: center;
+    padding: 13px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    padding: 16px 0;
+  }
+}
+
+.accordion__item + .accordion__item {
+  border-top: 1px solid #f3c72b;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
+}
+
 .accordion__item--opened {
   .accordion__content {
     display: block;
@@ -10,6 +49,14 @@
       flex-direction: column;
     }
   }
+
+  .accordion__heading-icon {
+    transform: rotate(180deg);
+  }
+}
+
+.accordion__header {
+  margin: 0;
 }
 
 .accordion__heading {
@@ -20,12 +67,55 @@
   line-height: 18px;
   text-transform: uppercase;
   color: $basic-blue-light;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &:hover {
+    color: rgba($basic-blue-light, 0.6);
+
+    path {
+      fill: rgba($basic-blue-light, 0.6);
+    }
+  }
+
+  &:active {
+    color: rgba($basic-blue-light, 0.3);
+
+    path {
+      fill: rgba($basic-blue-light, 0.3);
+    }
+  }
+
+  &:focus {
+    @include focus-outline("outline");
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-weight: 500;
+  }
 }
 
-.accordion__item {
+.accordion__heading-text::after {
   @media (min-width: $tablet-width) {
-    display: flex;
-    align-items: center;
+    content: ":";
+  }
+
+  @media (min-width: $desktop-width) {
+    content: "";
+  }
+}
+
+.accordion__heading-icon {
+  @media (min-width: $tablet-width) {
+    display: none;
   }
 
   @media (min-width: $desktop-width) {
@@ -35,4 +125,31 @@
 
 .accordion__content {
   display: none;
+  margin-top: 16px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+
+  @media (min-width: $desktop-width) {
+    display: none;
+    margin-top: 23px;
+  }
+}
+
+.accordion__content > * + * {
+  margin-top: 12px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+  }
+}
+
+.accordion__content-range {
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / -1;
+  }
 }
