@@ -13,4 +13,58 @@
   color: $basic-blue-light;
   margin-bottom: 24px;
   width: 145px;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 38px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 18px;
+  }
+}
+
+.fieldset__accordion {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 18px;
+  }
+}
+
+.fieldset__submit {
+  @include button-theme(
+    $basic-white,
+    $basic-white,
+    $basic-blue-light,
+    $button-font-weight-02,
+    $basic-white,
+    $basic-blue-light
+  );
+  @include button-size (
+    $button-radius-03,
+    12px 8px 8px,
+    $button-height-01
+  );
+
+  width: 100%;
+
+  &:hover {
+    box-shadow: 0 3px 6px 0 #00000024;
+  }
+
+  &:active {
+    background-color: #f3c72b;
+    color: rgba($basic-blue, 0.3);
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: $button-height-02;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

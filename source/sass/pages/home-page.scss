@@ -106,7 +106,7 @@
   color: $basic-white;
 
   @media (min-width: $tablet-width) {
-    @include home-page__fold(130px);
+    padding-top: 130px;
   }
 }
 
@@ -116,7 +116,7 @@
   background-color: $basic-lavander-10;
 
   @media (min-width: $tablet-width) {
-    @include home-page__fold(200px);
+    padding-top: 200px;
   }
 }
 
@@ -127,11 +127,11 @@
   color: $basic-white;
 
   @media (min-width: $tablet-width) {
-    @include home-page__fold(147px);
+    padding-top: 147px;
   }
 
   @media (min-width: $desktop-width) {
-    @include home-page__fold(231px);
+    padding-top: 231px;
   }
 }
 
@@ -141,11 +141,11 @@
   background-color: $basic-lavander-10;
 
   @media (min-width: $tablet-width) {
-    @include home-page__fold(134px);
+    padding-top: 134px;
   }
 
   @media (min-width: $desktop-width) {
-    @include home-page__fold(231px);
+    padding-top: 231px;
   }
 }
 
@@ -156,11 +156,11 @@
   color: $basic-white;
 
   @media (min-width: $tablet-width) {
-    @include home-page__fold(130px);
+    padding-top: 139px;
   }
 
   @media (min-width: $desktop-width) {
-    @include home-page__fold(208px);
+    padding-top: 208px;
   }
 }
 
@@ -170,15 +170,15 @@
   background-color: $basic-yellow;
 
   @media (min-width: $tablet-width) {
-    @include home-page__fold(102px);
+    padding-top: 102px;
   }
 
   @media (min-width: $desktop-width) {
-    @include home-page__fold(116px);
+    padding-top: 116px;
   }
 }
 
-.home-page__button--primary {
+.home-page__button-primary {
   @include button-size (
     $button-radius-01,
     $button-padding-03,

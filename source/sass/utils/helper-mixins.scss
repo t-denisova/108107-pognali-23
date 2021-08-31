@@ -26,13 +26,19 @@
     border-color: $hover-bg-color;
   }
 
-  &:focus {
+  &:focus,
+  &:focus-visible {
     border-color: $focus;
     box-shadow: 0 0 0 $button-outline-width $focus;
+    outline: none;
   }
 
   &:active {
     color: rgba($font-color, 0.3);
+
+    svg {
+      fill: rgba($icon-color, 0.3);
+    }
   }
 
   svg {
@@ -59,6 +65,11 @@ $outline: (
   outline-offset: 4px,
 );
 
+$outline-inner: (
+  outline: 4px solid  $focus,
+  outline-offset: -3px,
+);
+
 $invalid: (
   outline: 4px solid $basic-red,
   outline-offset: 4px,
@@ -74,6 +85,7 @@ $reset: (
 $tokens: (
   border: $border,
   outline: $outline,
+  outline-inner: $outline-inner,
   invalid: $invalid,
   reset: $reset
 );

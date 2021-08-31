@@ -4,7 +4,6 @@
   Array.prototype.forEach.call(headers, h => {
     let btn = h.querySelector('.accordion__heading');
     let target = h.parentElement;
-    console.log(target);
 
     btn.onclick = () => {
       let expanded = btn.getAttribute('aria-expanded') === 'true';

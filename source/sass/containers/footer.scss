@@ -4,6 +4,11 @@
   background-color: $basic-white;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
+
+  @media (min-width: $desktop-width) {
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+  }
 }
 
 .footer__inner {

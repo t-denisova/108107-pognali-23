@@ -45,13 +45,17 @@
   background-color: $basic-white;
   color: $basic-blue;
 
-  .header__action--icon-close {
+  .icon-close {
     display: block;
   }
 
-  .header__action--icon-burger {
+  .icon-burger {
     display: none;
   }
+}
+
+.header__logo {
+  margin-left: -8px;
 }
 
 .header__action {
@@ -68,6 +72,7 @@
     $button-padding-01,
     $button-height-01
   );
+  margin-right: -8px;
 
   @media (min-width: $desktop-width) {
     &.btn {
@@ -87,7 +92,7 @@
   );
 }
 
-.header__action--icon-close {
+.icon-close {
   display: none;
 }
 

@@ -1,0 +1,94 @@
+.textarea {
+  position: relative;
+}
+
+.textarea--invalid {
+  .textarea__input {
+    border-color: #f47e7e;
+  }
+
+  .textarea__requirement {
+    display: block;
+  }
+}
+
+.textarea__wrapper {
+  position: relative;
+  height: 220px;
+
+  @media (min-width: $tablet-width) {
+    height: 142px;
+  }
+}
+
+.textarea__input {
+  font-family: $font-family;
+  font-size: 16px;
+  line-height: 22px;
+  color: $special-grey;
+  margin: 0;
+  width: 100%;
+  padding: 20px 18px;
+  border: 1px solid #cbced9;
+  border-radius: 4px;
+  height: 100%;
+  resize: none;
+
+  &::placeholder {
+    font-family: $font-family;
+    font-size: 16px;
+    line-height: 22px;
+    color: rgba($special-grey, 0.3);
+  }
+
+  &:hover {
+    border-color: #959bb2;
+  }
+
+  &:active {
+    border-color: #161c35;
+
+    &::placeholder {
+      color: $special-grey;
+    }
+  }
+
+  &:focus {
+    @include focus-outline("outline");
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 23px;
+
+    &::placeholder {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+}
+
+.textarea__flag {
+  position: absolute;
+  right: 0;
+  top: -8px;
+
+  @media (min-width: $desktop-width) {
+    right: -130px;
+  }
+}
+
+.textarea__requirement {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 20px 16px;
+  background-color: #ffefef;
+  color: #ff0000;
+  border-left: 1px solid #f47e7e;
+  border-bottom: 1px solid #f47e7e;
+  border-right: 1px solid #f47e7e;
+  border-radius: 0 0 4px 4px;
+}

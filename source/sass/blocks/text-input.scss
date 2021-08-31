@@ -1,3 +1,8 @@
+
+.text-input--invalid .text-input__input {
+  color: #ff0000;
+}
+
 .text-input__wrapper {
   position: relative;
   display: flex;
@@ -29,10 +34,22 @@
     background-color: $basic-navy;
   }
 
+  &::placeholder {
+    font-family: $font-family;
+    font-size: 18px;
+    line-height: 18px;
+    color: rgba($special-grey, 0.3);
+  }
+
   @media (min-width: $tablet-width) {
     height: 80px;
     border-radius: 20px;
     padding: 28px 90px 28px 36px;
+
+    &::placeholder {
+      font-size: 24px;
+      line-height: 24px;
+    }
   }
 }
 
@@ -58,7 +75,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: $button-padding-04;
+    padding: 29px 290px 27px 33px;
     width: auto;
   }
 }
@@ -68,19 +85,21 @@
   top: 0;
   right: 0;
   left: auto;
-  bottom: 0;
+  width: 60px;
+  height: 60px;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 80px;
+  }
 }
 
-.text-input__submit__text {
+.text-input__submit-text {
   display: none;
 
   @media (min-width: $desktop-width) {
     display: inline-block;
   }
-}
-
-.text-input--invalid {
-  color: $basic-red;
 }
 
 .text-input__icon {

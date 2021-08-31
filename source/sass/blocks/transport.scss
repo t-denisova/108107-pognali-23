@@ -1,9 +1,49 @@
-.transport {
+.transport--edit {
+  position: relative;
+  padding: 16px;
+  border: 1px solid $basic-grey-01;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 26px;
+  }
+}
+
+.transport__list {
   display: flex;
   justify-content: center;
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+.transport__list--left {
+  justify-content: left;
+}
+
+.transport__header {
+  text-transform: uppercase;
+  color: $basic-blue-light;
+  margin: 0;
+  position: absolute;
+  top: -16px;
+  padding: 5px 14px;
+  background-color: $basic-lavander-10;
+
+  @media (min-width: $tablet-width) {
+    top: auto;
+    bottom: -16px;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+  }
+
+  @media (min-width: $desktop-width) {
+    bottom: -16px;
+  }
 }
 
 .transport__button {
@@ -12,7 +52,7 @@
     $basic-white,
     transparent,
     $button-font-weight-02,
-    transparent,
+    $basic-white,
     #d9d9d9
   );
   @include button-size(
@@ -20,6 +60,7 @@
     0,
     $button-height-01
   );
+  position: relative;
   width: $button-height-01;
 
   &:hover {
@@ -29,7 +70,6 @@
       fill: #b2b2b2;
     }
 
-
     &.transport__button--active svg {
       fill: $basic-blue-light;
       opacity: 0.7;
@@ -37,6 +77,7 @@
 
     .transport__tooltip {
       display: block;
+      z-index: 200;
     }
   }
 
@@ -59,6 +100,52 @@
   fill: $basic-blue-light;
 }
 
+.transport__button--small {
+  width: 30px;
+  min-height: 30px;
+
+  svg {
+    max-height: 18px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 43px;
+    min-height: 43px;
+
+    svg {
+      max-height: 30px;
+    }
+  }
+}
+
+.transport--special {
+  .transport__list {
+    justify-content: flex-start;
+
+    @media (min-width: $tablet-width) {
+      flex-direction: column;
+    }
+
+    @media (min-width: $desktop-width) {
+      flex-direction: row;
+    }
+  }
+
+  .transport__button {
+    width: 32px;
+    min-height: 32px;
+    background-color: #edeff6;
+
+    svg {
+      max-height: 18px;
+    }
+
+    @media (min-width: $tablet-width) {
+      background-color: transparent;
+    }
+  }
+}
+
 .transport__tooltip {
   display: none;
   position: absolute;
@@ -72,7 +159,6 @@
   color: $basic-white;
   border-radius: 4px;
 }
-
 
 .transport__tooltip::after {
   content: "";

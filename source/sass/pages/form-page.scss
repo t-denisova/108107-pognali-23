@@ -4,18 +4,38 @@
   margin-top: -30px;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
+
+  @media (min-width: $desktop-width) {
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+  }
 }
 
 .form-page__fold--01 {
   background-color: transparent;
   color: $basic-blue;
-  padding: 20px 0 50px 0;
+  padding-top: 24px;
+  padding-bottom: 64px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 66px;
+    padding-bottom: 88px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 73px;
+    padding-bottom: 95px;
+  }
 }
 
 .form-page__fold--02 {
   @include form-page__fold(50px);
   background-color: $special-blue-light;
   color: $basic-blue;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 106px;
+  }
 }
 
 .form-page__fold--03 {
@@ -32,6 +52,11 @@
   bottom: -30px;
   left: 0;
   background-color: $basic-lavander-40;
+
+  @media (min-width: $desktop-width) {
+    height: 60px;
+    bottom: -60px;
+  }
 }
 
 .form-page__layout {
