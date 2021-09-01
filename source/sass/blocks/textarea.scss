@@ -74,7 +74,14 @@
   top: -8px;
 
   @media (min-width: $desktop-width) {
-    right: -130px;
+    right: -180px;
+  }
+}
+
+.textarea__flag-image {
+  @media (min-width: $tablet-width) {
+    width: 70px;
+    height: auto;
   }
 }
 

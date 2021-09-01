@@ -10,10 +10,21 @@
   }
 
   @media (min-width: $desktop-width) {
+    padding-top: 88px;
+    padding-bottom: 138px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     column-gap: 172px;
+    background-position: bottom 87px right 60px;
+    padding-left: 130px;
+  }
+}
+
+@media (min-width: 768px) and (min-resolution: 2dppx) {
+  .directions {
+    background-image: url("../../img/flags-back@2x.png");
+    background-size: 288px auto;
   }
 }
 
@@ -72,7 +83,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: $padding-desktop-03;
+    padding-left: 0;
     padding-right: 0;
     grid-column: 1 / 2;
     grid-row: 1 / -1;
