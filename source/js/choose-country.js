@@ -188,7 +188,6 @@
         block.classList.add('choose-country--opened');
         for (let countries of allCountriesLists) {
           countries.hidden = false;
-          console.log('ddd');
         }
 
       } else {
