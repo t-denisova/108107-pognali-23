@@ -1,9 +1,5 @@
 .hero {
   position: relative;
-  background-image: url("../../img/globe-back-mobile-1.png");
-  background-size: 100% auto;
-  background-position: 0 0;
-  background-repeat: no-repeat;
   padding-top: 94px;
 
   @media (min-width: $tablet-width) {
@@ -11,18 +7,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto;
-    background-image: url("../../img/globe-back-tablet.png");
-    background-size: contain;
-    background-position: top 380px left;
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 110px;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto;
-    background-image: url("../../img/globe-back-desktop.png");
-    background-size: contain;
-    background-position: top left;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: auto 107px 125px;
   }
 }
 
@@ -37,6 +27,25 @@
 
   @media (min-width: $tablet-width) {
     display: none;
+  }
+}
+
+.hero__back-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  top: 0;
+
+  @media (min-width: $tablet-width) {
+    top: auto;
+    width: 100%;
+    height: auto;
+    bottom: 150px;
+  }
+
+  @media (min-width: $desktop-width) {
+    bottom: 0;
   }
 }
 
@@ -67,6 +76,7 @@
     line-height: 70px;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    align-self: center;
   }
 }
 
@@ -79,14 +89,26 @@
   @media (min-width: $tablet-width) {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+    margin-bottom: -16px;
   }
 
   @media (min-width: $desktop-width) {
     grid-column: 2 / 3;
-    grid-row: 1 / 2;
+    grid-row: 1 / -1;
   }
 }
 
+.hero__image {
+  @media (min-width: $tablet-width) {
+    width: 372px;
+    height: 451px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 431px;
+    height: 640px;
+  }
+}
 
 .hero__actions {
   margin-top: -25px;
@@ -109,6 +131,7 @@
     padding-right: 0;
     grid-column: 1 / 2;
     grid-row: 2 / 3;
+    margin-top: 76px;
   }
 
   @media (min-width: $desktop-width) {
@@ -116,6 +139,8 @@
     padding-right: $padding-desktop-01;
     grid-column: 3 / 4;
     grid-row: 1 / 2;
+    align-self: center;
+    margin-top: 0;
   }
 }
 

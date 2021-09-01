@@ -416,6 +416,13 @@
   }
 }
 
+.steps__flag-img {
+  @media (min-width: $tablet-width) {
+    width: 70px;
+    height: auto;
+  }
+}
+
 .steps__delete {
   position: absolute;
   top: -10px;
