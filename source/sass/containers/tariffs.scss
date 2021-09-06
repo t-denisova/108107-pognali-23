@@ -99,11 +99,13 @@
   }
 }
 
-.tariffs__button-icon {
+.tariffs__button-icon-wrapper {
   display: none;
 
   @media (min-width: $tablet-width) {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 66px;
     height: 66px;
     background-color: $basic-lavander-30;

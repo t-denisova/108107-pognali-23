@@ -65,6 +65,8 @@
   height: 43px;
   border: none;
   text-align: center;
+  appearance: none;
+  margin: 0;
 
   &:focus {
     @include focus-outline("border");
@@ -77,8 +79,9 @@
   }
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  appearance: none;
   margin: 0;
 }
 

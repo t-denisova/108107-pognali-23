@@ -1,6 +1,7 @@
 .select {
   position: relative;
   display: flex;
+  align-items: center;
 }
 
 .select__input-wrpper {
@@ -16,8 +17,12 @@
     right: 1px;
     height: calc(100% - 4px);
     width: 52px;
-    background: linear-gradient(to left, $basic-white 65%, transparent);
+    background: linear-gradient(to left, $basic-white 65%, rgba(255, 255, 255, 0));
     z-index: 1;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
   }
 }
 
@@ -61,4 +66,11 @@
   height: 100%;
   fill: rgba(#000000, 0.3);
   z-index: 2;
+
+  @media (min-width: $tablet-width) {
+    width: 20px;
+    height: 17px;
+    right: 27px;
+    top: 28px;
+  }
 }

@@ -53,6 +53,7 @@
 
 .switcher__socials {
   margin-bottom: 30px;
+  justify-content: center;
 
   @media (min-width: $tablet-width) {
     justify-content: flex-start;

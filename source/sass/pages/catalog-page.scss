@@ -116,9 +116,10 @@
   }
 }
 
-.catalog-page__show-more {
+.catalog-page__show-more.btn {
   width: 100%;
-  align-items: flex-end;
+  display: flex;
+  align-items: end;
   margin-bottom: 16px;
   font-size: 17px;
   line-height: 30px;

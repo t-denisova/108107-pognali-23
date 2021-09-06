@@ -10,12 +10,14 @@
     header.classList.toggle('header--opened');
 
     if (logo.classList.contains('logo--inverse') && !headerIsReversed) {
-      logo.classList.remove('logo--inverse');
+      logoNormal.style.display="block";
+      logoInverse.style.display="inverse";
       burger.classList.remove('header__action--inverse');
     }
 
     if (!logo.classList.contains('logo--inverse') && header.classList.contains('header--opened')) {
-      logo.classList.add('logo--inverse');
+      logoNormal.style.display="none";
+      logoInverse.style.display="block";
       burger.classList.add('header__action--inverse');
     }
 

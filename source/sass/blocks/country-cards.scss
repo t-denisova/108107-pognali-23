@@ -38,7 +38,7 @@
     height: 81px;
     bottom: 0;
     left: 0;
-    background: linear-gradient(to top, $basic-lavander-10, transparent);
+    background: linear-gradient(to top, $basic-lavander-10, rgba(255, 255, 255, 0));
     z-index: 1;
   }
 }
@@ -66,12 +66,12 @@
 
   @media (min-width: $tablet-width) {
     border-radius: 20px;
-    padding: 30px 26px 20px;
+    padding: 30px 26px 15px;
     margin-top: 0;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 23px 28px 20px;
+    padding: 23px 28px 15px;
   }
 }
 
@@ -129,10 +129,18 @@
 
   @media (min-width: $tablet-width) {
     position: static;
+    display: flex;
+    align-items: flex-end;
   }
 }
 
 .country-cards__users-num svg {
   fill: $special-grey;
   opacity: 0.3;
+
+  @media (min-width: $tablet-width) {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
 }
