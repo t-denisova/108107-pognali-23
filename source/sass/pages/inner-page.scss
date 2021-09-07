@@ -120,4 +120,22 @@
 
     margin-top: 25px;
   }
+
+
+  &:active svg {
+    opacity: 0.3;
+  }
+
+  &:hover {
+    color: rgba($basic-white, 0.6);
+
+    svg {
+      opacity: 0.6;
+    }
+  }
+
+}
+
+.inner-page__header-back svg {
+  margin-left: 25px;
 }

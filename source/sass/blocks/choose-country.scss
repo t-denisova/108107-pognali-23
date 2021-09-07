@@ -64,19 +64,20 @@
   }
 }
 
-.choose-country__action {
+.choose-country__action.btn {
   @include catalog-page__text-01();
   @include button-reset();
   text-transform: uppercase;
   color: $basic-blue;
   margin-left: auto;
+  font-weight: 700;
 
   &:focus {
     @include focus-outline("border");
   }
 
   @media (min-width: $tablet-width) {
-    min-width: 188px;
+    min-width: 180px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -88,7 +89,7 @@
   }
 }
 
-.choose-country__action-text.btn {
+.choose-country__action-text {
   display: none;
 
   @media (min-width: $tablet-width) {
@@ -447,6 +448,10 @@
       background-color: $basic-white;
       width: calc(100% - 270px);
     }
+  }
+
+  .choose-country__action-icon--opened {
+    display: none;
   }
 
   .choose-country__filter-inner {

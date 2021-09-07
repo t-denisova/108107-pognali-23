@@ -24,6 +24,10 @@
   background-color: transparent;
   display: none;
 
+  &:hover .traveler__photo {
+    transform: none;
+  }
+
   @media (min-width: $desktop-width) {
     display: flex;
     align-items: center;
@@ -78,6 +82,10 @@
   background-color: transparent;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto auto auto;
+
+  &:hover .traveler__photo {
+    transform: none;
+  }
 
   .traveler__score {
     grid-column: 1 / 2;
@@ -641,10 +649,6 @@
       border-color: rgba(#000000, 0.1);
       padding-top: 2px;
     }
-
-    @media (min-width: $desktop-width) {
-      padding-top: 2px;
-    }
   }
 
   .traveler__action {
@@ -742,10 +746,6 @@
   padding-top: 3px;
   border-top: 1px solid rgba($basic-white, 0.3);
   width: 60%;
-
-  @media (min-width: $desktop-width) {
-    padding-top: 6px;
-  }
 }
 
 .traveler__inner {

@@ -160,6 +160,8 @@
   const mediaQueryDesktop= window.matchMedia('(min-width: 1440px)');
   const allCountriesLists = document.querySelectorAll('.choose-country__countries-list');
   const isForm = window.location.href.indexOf("form") > -1;
+  const iconClosed = document.querySelector('choose-country__action-icon--closed');
+  const iconOpened= document.querySelector('choose-country__action-icon--opened');
 
   button.addEventListener('click', () => {
     block.classList.toggle('choose-country--opened');
