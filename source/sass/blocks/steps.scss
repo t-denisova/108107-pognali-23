@@ -129,6 +129,10 @@
     display: flex;
     justify-content: space-between;
   }
+
+  @media (min-width: $desktop-width) {
+    width: calc(100% + 30px);
+  }
 }
 
 .steps__button-01 {
@@ -274,7 +278,7 @@
 
     &::before {
       height: 540px;
-      right: 230px;
+      right: 223px;
     }
   }
 }
@@ -285,19 +289,15 @@
   margin-top: -4px;
   right: 48px;
   z-index: 3;
-
-  circle {
-    stroke: #cbced9;
-    fill: transparent;
-  }
+  fill: transparent;
+  stroke: #cbced9;
 
   @media (min-width: $tablet-width) {
     position: static;
-    margin: 32px 19px;
-
-    circle {
-      fill: $basic-white;
-    }
+    margin: 0 17px;
+    fill: $basic-white;
+    width: 14px;
+    height: 14px;
   }
 
   @media (min-width: $desktop-width) {
@@ -306,9 +306,9 @@
   }
 }
 
-.steps__status--active circle {
-  stroke: $basic-blue-light;
+.steps__status--active {
   fill: $basic-blue-light;
+  stroke: $basic-blue-light;
 }
 
 .steps__step1-input + .steps__step1-input {
@@ -376,9 +376,10 @@
 
     @include button-size(
       4px,
-      27px 25px 23px,
+      22px 24px 18px,
       70px
     );
+    height: 70px;
   }
 }
 
@@ -386,6 +387,13 @@
   position: absolute;
   top: 14px;
   right: 14px;
+
+  @media (min-width: $tablet-width) {
+    width: 20px;
+    height: 17px;
+    right: 27px;
+    top: 28px;
+  }
 }
 
 .steps__flag-wrapper {
@@ -404,7 +412,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 189px;
+    width: 179px;
   }
 }
 
@@ -432,6 +440,9 @@
   background-color: #edeff6;
   border: 1px solid #edeff6;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:hover svg {
     opacity: 0.3;
@@ -450,6 +461,15 @@
     right: 0;
     background-color: $basic-white;
     border-color: $basic-white;
+    width: 30px;
+    height: 24px;
+  }
+}
+
+.steps__delete svg {
+  @media (min-width: $tablet-width) {
+    width: 22px;
+    height: 24px;
   }
 }
 
@@ -513,4 +533,10 @@
     top: 89px;
     right: 210px;
   }
+}
+
+.steps__choose-country,
+.steps__add-country-wrapper {
+  display: flex;
+  align-items: center;
 }

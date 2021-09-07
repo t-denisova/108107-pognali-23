@@ -14,7 +14,7 @@
     padding-right: $padding-desktop-03;
     padding-bottom: 61px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
   }
 }
@@ -38,10 +38,14 @@
 
   @media (min-width: $tablet-width) {
     margin-right: 26px;
+    width: 68px;
+    height: 68px;
   }
 
   @media (min-width: $desktop-width) {
     margin-right: 31px;
+    width: 90px;
+    height: 90px;
   }
 }
 

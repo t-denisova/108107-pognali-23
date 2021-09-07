@@ -1,4 +1,4 @@
-body {
+.page-body {
   max-width: 100vw;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -13,7 +13,7 @@ body {
   font-style: normal;
 }
 
-html {
+.page-html {
   box-sizing: border-box;
 }
 

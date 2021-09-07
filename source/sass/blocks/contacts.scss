@@ -163,6 +163,19 @@
   fill: $basic-yellow;
 }
 
+@media (min-width: $tablet-width) {
+  .contacts__icon--phone {
+    width: 27px;
+    height: 26px;
+  }
+
+  .contacts__icon--email {
+    width: 36px;
+    height: 38px;
+  }
+}
+
+
 .contacts__icon--compact {
   fill: $basic-blue;
 }
