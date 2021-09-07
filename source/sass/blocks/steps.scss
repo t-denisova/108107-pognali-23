@@ -289,12 +289,13 @@
   margin-top: -4px;
   right: 48px;
   z-index: 3;
-  color: transparent;
+  fill: transparent;
+  stroke: #cbced9;
 
   @media (min-width: $tablet-width) {
     position: static;
     margin: 0 17px;
-    color: $basic-white;
+    fill: $basic-white;
     width: 14px;
     height: 14px;
   }
@@ -306,11 +307,8 @@
 }
 
 .steps__status--active {
-  color: $basic-blue-light;
-
-  circle {
-    stroke: $basic-blue-light;
-  }
+  fill: $basic-blue-light;
+  stroke: $basic-blue-light;
 }
 
 .steps__step1-input + .steps__step1-input {

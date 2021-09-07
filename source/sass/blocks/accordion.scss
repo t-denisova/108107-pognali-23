@@ -72,10 +72,14 @@
   justify-content: space-between;
   align-items: center;
 
+  svg {
+    fill: $basic-blue-light;
+  }
+
   &:hover {
     color: rgba($basic-blue-light, 0.6);
 
-    path {
+    svg {
       fill: rgba($basic-blue-light, 0.6);
     }
   }
@@ -83,7 +87,7 @@
   &:active {
     color: rgba($basic-blue-light, 0.3);
 
-    path {
+    svg {
       fill: rgba($basic-blue-light, 0.3);
     }
   }
